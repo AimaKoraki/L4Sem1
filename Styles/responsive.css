@@ -22,7 +22,10 @@
   }
   /*||Footer*/
   @media (max-width: 768px) {
-    .Footer__Content {
+    .Footer__Content,
+    .Unordered__Container,
+    .Ordered__Container,
+    .Gpage-header {
         grid-template-columns: 1fr;
         text-align: center;
     }
@@ -40,10 +43,7 @@
         gap: 1rem;
     }
 
-    .Newsletter__Form input {
-        width: 100%;
-    }
-
+    .Newsletter__Form input,
     .Newsletter__Form button {
         width: 100%;
     }
@@ -73,10 +73,6 @@
         padding: 20px; 
     }
 
-    .Unordered__Container, .Ordered__Container {
-        grid-template-columns: 1fr; 
-        text-align: center;
-    }
 
     .Un__Con__left, .Or__con__right {
         padding: 0; 
@@ -92,7 +88,8 @@
 }
 
 @media screen and (max-width: 480px) {
-    .Hero__content h1 {
+    .Hero__content h1,
+    .timeline {
         font-size: 1.5rem;
     }
 
@@ -187,16 +184,13 @@
         border-top: 2px solid var(--CATEGORIES-BGCOLOR); 
     }
 
-    .release__date {
+    .release__date,    
+    .timeline__item .game__details p {
         font-size: 0.9rem; 
     }
 
     .timeline__item .game__details h3 {
         font-size: 1.2rem; 
-    }
-
-    .timeline__item .game__details p {
-        font-size: 0.9rem;
     }
 
     .timeline__item .preorder__button {
@@ -206,9 +200,6 @@
 }
 
 @media (max-width: 480px) {
-    .timeline {
-        gap: 1.5rem; 
-    }
 
     .timeline__item img {
         border-radius: 6px;
@@ -227,16 +218,38 @@
         font-size: 1rem; 
     }
 
-    .timeline__item .game__details span {
+    .timeline__item .game__details span,
+    .timeline__item .game__details p  {
         font-size: 0.8rem;
-    }
-
-    .timeline__item .game__details p {
-        font-size: 0.8rem; 
     }
 
     .timeline__item .preorder__button {
         font-size: 0.8rem; 
         padding: 0.3rem 0.6rem; 
+    }
+}
+
+/*||Games*/
+@media (max-width: 768px) {
+    .games__grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    }
+}
+@media (max-width: 768px) {
+
+
+    .Gpage-header .leftside h1 {
+        font-size: 2rem; 
+    }
+
+    .Gpage-header .leftside p {
+        font-size: 1rem; 
+    }
+
+    .Gpage-header .rightside .grid-gallery {
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); 
+    }
+    .grid-gallery{
+        grid-template-columns: 1fr
     }
 }
