@@ -30,8 +30,10 @@ button{
     --BGIMAGE: linear-gradient(to bottom, var(--BGCOLOR), var(--BGCOLOR-FADE));
     --BODY-BGCOLOR: #091e2c;
     --BORDER-COLOR: #082f49;
-    --BUTTON-COLOR: #0284c7;
+    --BUTTON-COLOR: #e0f2fe;
+    --HEADING-FONT-COLOR:#e0f2fe;    
     --BUTTON-HOVER:#082f49;
+    --BUTTON-HOVER-TEXT:#e0f2fe;
     --BUTTON-HOVER-SHADOW:0px 4px 0px 0px #0284c7;
     --HEADING-FONT-COLOR:#e0f2fe;
     --FONT-COLOR: #e0f2fe;
@@ -44,7 +46,7 @@ button{
     --HERO-GRADIANT:linear-gradient(to bottom, var(--HERO-COLOR), var(--HERO-COLOR-FADE));
     --HERO-SBUTTON-COLOR:white;
     --HERO-SBUTTON-BCOLOR:#DDD;
-    --LINK-ACTIVE: rgb(8, 58, 124);
+    --LINK-ACTIVE: #e0f2fe;
     --LINK-HOVER-BGCOLOR:#0c4249;
     --LINK-COLOR:#e0f2fe;
     --LINK-HOVER:#e0f2fe;
@@ -104,9 +106,7 @@ body{
 p{
     line-height: 1.5;
 }
-a:any-link{
-    color: var(--LINK-COLOR);
-}
+
 a:hover, a:focus-visible{
     color: var(--LINK-HOVER);
 
@@ -293,7 +293,7 @@ a:active{
     background-color:var(--BUTTON-COLOR);
     border: none;
     padding: 10px 12px;
-    color: var(--HERO-SBUTTON-COLOR);
+    color: var(--BUTTON-COLOR-TEXT);
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -433,11 +433,12 @@ a:active{
 
 .shop__button {
     background-color: var(--BUTTON-COLOR);
-    color: var(--SHOP-BUTTON-COLOR);
+    color: var(--BUTTON-COLOR-TEXT);
     padding: 0.5rem 1rem;
     border: none;
     border-radius: 5px;
     font-size: 0.9rem;
+    font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease;
     text-decoration: none;
@@ -446,7 +447,7 @@ a:active{
 
 .shop__button:hover {
     background-color: var(--BUTTON-HOVER);
-    color: var(--SHOP-BUTTON-HVCOLOR);
+    color: var(--BUTTON-HOVER-TEXT);
 }
 .Categories {
     text-align: center;
@@ -505,11 +506,12 @@ a:active{
 
 .CCB__Btutton{
     background-color: var(--BUTTON-COLOR);
-    color: var(--white);
+    color: var(--BUTTON-COLOR-TEXT);
     padding: 0.8rem 2rem;
     border: none;
     border-radius: 5px;
     font-size: 1rem;
+    font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease;
     text-decoration: none;
@@ -517,8 +519,8 @@ a:active{
     margin-top: auto;
 }
 .CCB__Btutton:hover{
-    background-color: var(--LINK-HOVER-BGCOLOR);
-    color: var(--LINK-HOVER);
+    background-color: var(--BUTTON-HOVER);
+    color: var(--BUTTON-HOVER-TEXT);
 }
 
 /*------------------------------------------------ ||About Page ------------------------------------------------------------*/
