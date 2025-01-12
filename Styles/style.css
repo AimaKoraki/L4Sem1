@@ -1,4 +1,4 @@
-/* ||Reset */
+/*------------------------------------------------- ||Reset -------------------------------------------------------------------------------------------------------------------*/
 *,
 *::after,
 *::before {
@@ -121,6 +121,7 @@ a:active{
     color: var(--LINK-ACTIVE);
 }
 
+/*--------------------------------------------------Header-----------------------------------------------------------------*/
 .header{
     display: grid;
     grid-template-columns: 1fr auto;
@@ -130,11 +131,7 @@ a:active{
     background-color: var(--HEADER-BGCOLOR);
 
 }
-.leftside{
-    display: flex;
-    align-items: center;
-}
-.rightside{
+.leftside, .rightside{
     display: flex;
     align-items: center;
 }
@@ -385,7 +382,7 @@ a:active{
     height: 100%; 
     padding: 1rem;
 }
-.Unordered__Container {
+.Unordered__Container, .Ordered__Container {
     display: grid; 
     grid-template-columns: 1fr 2fr; 
     align-items: center;
@@ -397,38 +394,38 @@ a:active{
     width: 100%; 
 }
 
-.Un__Con__left {
+.Un__Con__left, .Or__con__right {
 
     text-align: center; 
     padding-right: 1em;
 }
 
-.Un__Con__left img {
+.Un__Con__left img, .Or__con__right img {
     max-width: 100%; 
     height: auto;
     max-height: 700px;
 }
 
-.Un__Con__right {
+.Un__Con__right, .Or__con__left {
     text-align: left; 
 }
 
-.Unordered__list {
+.Unordered__list, .Ordered__list  {
     padding: 0;
     margin: 0;
 }
 
-.Unordered__list li {
+.Unordered__list li, .Ordered__list li {
     margin-bottom: 15px;
 }
 
-.Unordered__list h3 {
+.Unordered__list h3, .Ordered__list h3 {
     margin-bottom: 5px;
     font-family: var(--FF-HEADINGS);
     font-size: 1.8em;
 }
 
-.Unordered__list p {
+.Unordered__list p, .Ordered__list p {
     margin: 0;
     font-size: 16px;
     color: var(--CATEGORIES-PCOLOR);
@@ -450,55 +447,6 @@ a:active{
 .Unordered_img:hover, .Ordered__image:hover{
     transform: scale(1.05);
 }
-/*||Ordered list*/
-.Ordered__Container {
-    display: grid; 
-    grid-template-columns: 1fr 2fr; 
-    align-items: center;
-    gap: 20px;
-    padding: 50px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    border-radius: 10px; 
-    max-width: 1400px; 
-    width: 100%; 
-}
-
-.Or__con__right {
-    text-align: center; 
-    padding-right: 1em;
-}
-
-.Or__con__right img {
-    max-width: 100%; 
-    height: auto;
-    max-height: 700px;
-}
-
-.Or__con__left {
-    text-align: left; 
-}
-
-.Ordered__list {
-    padding: 0;
-    margin: 0;
-}
-
-.Ordered__list li {
-    margin-bottom: 15px;
-}
-
-.Ordered__list h3 {
-    margin-bottom: 5px;
-    font-family: var(--FF-HEADINGS);
-    font-size: 1.8em;
-}
-
-.Ordered__list p {
-    margin: 0;
-    font-size: 16px;
-    color: var(--CATEGORIES-PCOLOR);
-}
-
 /*||Featured Products*/
 .featured__products {
     padding: 2rem 2rem;
@@ -587,9 +535,9 @@ a:active{
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
     text-decoration: none; 
     transition: transform 0.3s ease, box-shadow 0.3s ease; 
-    justify-content: space-between; /* Ensure space is distributed */
-    align-items: center; /* Center content horizontally */
-    height: 100%; /* Ensure the card takes full height */
+    justify-content: space-between; 
+    align-items: center; 
+    height: 100%; 
     box-sizing: border-box;
 }
 
@@ -640,11 +588,11 @@ a:active{
 }
 
 /*------------------------------------------------ ||About Page ------------------------------------------------------------*/
-.About__header{
+.page__header{
     padding-left: 1rem;
     border-bottom: 1px solid ;
 }
-.About__header h1{
+.page__header h1{
     font-size:larger;
 }
 .about__content {
@@ -794,6 +742,13 @@ a:active{
     background-color: var(--ABContainer-COLOR-HOVER);
 }
 /*----------------------------------------------------------------Upcoming Games---------------------------------------------------------------------------------*/
+.Upcoming__page__Header{
+    padding-left: 1rem;
+    padding-bottom: 2rem;
+}
+.Upcoming__dis{
+    padding-top: 1rem;
+}
 .timeline {
     max-width: 800px;
     margin: 0 auto;
@@ -843,7 +798,10 @@ a:active{
     opacity: 1; 
 }
 
-
+.timeline__item:hover{
+    transform: translateX(10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
 .timeline__item .game__details {
     padding: 1rem;
     display: flex;
@@ -880,50 +838,56 @@ a:active{
 .timeline__item .preorder__button:hover {
     background-color: darken(var(--BUTTON-HOVER), 10%);
 }
-.Upcoming__dis p{
-    text-align: justify;
-    padding: 2rem 2rem 1rem 1rem;
-
+.dis__Box{
+    display: grid;
+    place-items: center;
+    background-color: var(--CATEGORIES-COLOR);
+    border: 1px solid var(--GAMECARD-BGCOLOR);
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 1400px;
+    margin: 0 auto; 
 }
+
+.dis__Box p{
+    text-align: justify;
+    margin: 0; 
+    line-height: 1.6
+}
+
+.dis__Box:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/*-------------------------------------------------||Consoles Page-----------------------------------------------------------------------------------------------*/
+
+.consoles__grid{
+    border-top: 2px solid var(--BORDER-COLOR);
+}
+.consoles__grid h2{
+    padding: 1rem;
+    text-align: center;
+}
+
+/*-------------------------------------------------||Gaming Peripherals Page-----------------------------------------------------------------------------------------------*/
+.peripherals__products h2{
+    padding: 1rem;
+    text-align: center;
+}
+.peripherals__products img{
+    background-color: white;
+}
+
 
 /*-------------------------------------------------||Game Page---------------------------------------------------------*/
 .Gpage-header {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Two equal columns */
-    align-items: center;
-    gap: 2rem; /* Space between columns */
+    gap: 2rem; 
     padding: 2rem;
 }
-.Gpage-header .leftside {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem; /* Space between heading and paragraph */
-}
 
-.Gpage-header .leftside h1 {
-    font-size: 2.5rem; /* Larger heading for desktop */
-    margin: 0;
-}
-.grid-gallery {
-    --size: 100px;
-    display: grid;
-    grid-template-columns: repeat(6, var(--size));
-    grid-auto-rows: var(--size);
-    gap: 5px;
-    place-items: start center;
-    margin-bottom: var(--size);
-  }
-.grid-gallery img {
-    width: calc(var(--size) * 2);
-    height: calc(var(--size) * 2);
-    object-fit: cover;
-    grid-column: auto / span 2;
-    border-radius: 5px;
-    clip-path: path("M90,10 C100,0 100,0 110,10 190,90 190,90 190,90 200,100 200,100 190,110 190,110 110,190 110,190 100,200 100,200 90,190 90,190 10,110 10,110 0,100 0,100 10,90Z"); 
-  }
-.grid-gallery:has(img:hover) img:not(:hover) {
-    filter: brightness(0.5) contrast(0.5);
-  }
 .featured__games {
     padding: 4rem 2rem;
     border-bottom: 2px solid var(--BORDER-COLOR);
@@ -1069,10 +1033,74 @@ a:active{
 
 .faq__answer {
     margin-top: 1rem;
-    display: none;
 }
 
 .faq__item.active .faq__answer {
     display: block;
 }
 
+.form__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh; 
+    width: 100%;
+  }
+  
+  .form__container h2 {
+    margin-bottom: 1rem;
+    color: var(--FONT-COLOR);
+  }
+  
+  .contact__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background-color: var(--CATEGORIES-COLOR);
+    border: 1px solid var(--BORDER-COLOR);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  .contact__form label {
+    text-align: left;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--FONT-COLOR);
+  }
+  
+  .contact__form input,
+  .contact__form textarea {
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    width: 100%;
+  }
+  
+  .contact__form input:focus,
+  .contact__form textarea:focus {
+    border-color: var(--HEADER-COLOR-HOVER);
+    outline: none;
+  }
+  
+  .contact__form button {
+    background-color: var(--BUTTON-COLOR);
+    color: var(--FONT-COLOR);
+    padding: 0.8rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact__form button:hover {
+    background-color: var(--BUTTON-HOVER);
+    color: white;
+  }
