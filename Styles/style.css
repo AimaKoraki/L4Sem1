@@ -19,6 +19,12 @@ button{
 
 /* --------------------------------------------------------------------------------||Variables -------------------------------------------------------------------------*/
 :root {
+    --d: 2500ms;
+	--angle: 90deg;
+	--gradX: 100%;
+	--gradY: 50%;
+	--c1: rgba(168, 239, 255, 1);
+	--c2: rgba(168, 239, 255, 0.1);
     /* FONTS */
     --FF:"Roboto", sans-serif;
     --FF-HEADINGS:"Montserrat", sans-serif;
@@ -31,12 +37,11 @@ button{
     --BODY-BGCOLOR: #091e2c;
     --BORDER-COLOR: #082f49;
     --BUTTON-COLOR: #e0f2fe;
-    --HEADING-FONT-COLOR:#e0f2fe;    
+    --HEADING-FONT-COLOR:#e0f2fe;
     --BUTTON-HOVER:#082f49;
     --BUTTON-COLOR-TEXT:#05131d;
     --BUTTON-HOVER-TEXT:#e0f2fe;
     --BUTTON-HOVER-SHADOW:0px 4px 0px 0px #0284c7;
-    --HEADING-FONT-COLOR:#e0f2fe;
     --FONT-COLOR: #e0f2fe;
     --HEADER-BGCOLOR: #051a29;
     --HEADER-COLOR: #FFF;
@@ -47,7 +52,7 @@ button{
     --HERO-GRADIANT:linear-gradient(to bottom, var(--HERO-COLOR), var(--HERO-COLOR-FADE));
     --HERO-SBUTTON-COLOR:white;
     --HERO-SBUTTON-BCOLOR:#DDD;
-    --LINK-ACTIVE: #e0f2fe;
+    --LINK-ACTIVE: rgb(8, 58, 124);
     --LINK-HOVER-BGCOLOR:#0c4249;
     --LINK-COLOR:#e0f2fe;
     --LINK-HOVER:#e0f2fe;
@@ -62,8 +67,6 @@ button{
     --FOOTER-NEWS-BUTTON-HOVER:#056596;
     --SOCIAL-LINKS-COLOR:#FFF;
     --SOCIAL-LINKS-HOVER:#0c5174;
-    --SHOP-BUTTON-COLOR:#ecf8ff;
-    --SHOP-BUTTON-HVCOLOR: #FFF;
     --GAMECARD-BGCOLOR:#122938;
     --ABContainer-COLOR:#0b2d42;
     --ABContainer-COLOR-HOVER:#010f1a;
@@ -107,8 +110,6 @@ body{
 p{
     line-height: 1.5;
 }
-
-
 /*--------------------------------------------------Header-----------------------------------------------------------------*/
 .header{
     display: grid;
@@ -301,6 +302,66 @@ p{
 
 .search-bar button i {
     font-size: 20px; 
+}
+/*||Lists border animation*/
+
+@property --angle {
+    syntax: '<angle>';
+    initial-value: 90deg;
+    inherits: true;
+  }
+  
+  @property --gradX {
+    syntax: '<percentage>';
+    initial-value: 50%;
+    inherits: true;
+  }
+  
+  @property --gradY {
+    syntax: '<percentage>';
+    initial-value: 0%;
+    inherits: true;
+  }
+  .Content__Wrapper{
+    min-width: min(40rem, 100%);
+  }
+.Ordered__Container, .Unordered__Container{
+	border: 0.35rem solid;
+    border-image: conic-gradient(from var(--angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.15turn, var(--c2) 0.25turn) 30;
+	animation: borderRotate var(--d) linear infinite forwards;
+}  
+
+.Ordered__Container:nth-child(2), .Unordered__Container:nth-child(2){
+    border-image: radial-gradient(ellipse at var(--gradX) var(--gradY), var(--c1), var(--c1) 10%, var(--c2) 40%) 30;
+	animation: borderRadial var(--d) linear infinite forwards;
+}
+@keyframes borderRotate {
+	100% {
+		--angle: 420deg;
+	}
+}
+
+@keyframes borderRadial {
+	20% {
+		--gradX: 100%;
+		--gradY: 50%;
+	}
+	40% {
+		--gradX: 100%;
+		--gradY: 100%;
+	}
+	60% {
+		--gradX: 50%;
+		--gradY: 100%;
+	}
+	80% {
+		--gradX: 0%;
+		--gradY: 50%;
+	}
+	100% {
+		--gradX: 50%;
+		--gradY: 0%;
+	}
 }
 /*||Unordered List*/
 
