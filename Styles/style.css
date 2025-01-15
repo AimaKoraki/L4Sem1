@@ -751,6 +751,42 @@ a:active{
     margin-bottom: 1rem;
 
 }
+.values__section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
+}
+
+.values__grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.value__card {
+    background: var(--GAMECARD-BGCOLOR);
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.value__card h3 {
+    font-size: 1.5em;
+    margin-bottom: 0.5rem;
+    color: #00BFFF;
+}
+
+.value__card p {
+    font-size: 1em;
+    color: var(--FONT-COLOR); 
+}
+
 .ABContent__Wrapper {
     display: grid;
     place-items: center; 
