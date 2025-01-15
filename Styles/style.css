@@ -756,7 +756,10 @@ a:active{
     flex-direction: column;
     align-items: center;
     padding: 2rem;
+    padding-bottom: 1rem;
     text-align: center;
+    background-color: var(--BGCOLOR);
+    border-radius: 20px;
 }
 
 .values__grid {
@@ -775,7 +778,9 @@ a:active{
     border-radius: 10px;
     text-align: center;
 }
-
+.value__card:hover{
+    transform: translateY(-5px);
+}
 .value__card h3 {
     font-size: 1.5em;
     margin-bottom: 0.5rem;
