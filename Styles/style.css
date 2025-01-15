@@ -245,6 +245,7 @@ a:active{
 
 .Footer__Section h3 {
     margin-bottom: 1rem;
+    border-bottom: 2px solid #00BFFF;
 }
 
 .Social__Links {
@@ -261,7 +262,13 @@ a:active{
 .Social__Links a:hover {
     color: var(--SOCIAL-LINKS-HOVER);
 }
-
+.Quick__links{
+    display: grid;
+    gap: 0.5rem;
+}
+.Quick__links a{
+    text-decoration: none;
+}
 .Newsletter__Form {
     display: flex;
     gap: 0.5rem;
@@ -472,30 +479,49 @@ a:active{
     padding: 0;
     margin: 0;
 }
+.ordered__list {
+    padding-left: 20px; /* Adds space for markers */
+    margin: 0; /* Resets margin but keeps padding for markers */
+    list-style-type:decimal; /* Ensures the list uses default style */
+}
+.Unordered__list {
+    padding-left: 20px; /* Adds space for markers */
+    margin: 0; /* Resets margin but keeps padding for markers */
+    list-style-type: disc; /* Ensures the list uses default style */
+}
+.Unordered__list h2, .Ordered__list h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #00BFFF; /* Highlight color for headings */
+}
 
 .Unordered__list p, .Ordered__list p {
-    font-family: var(--FF);
-    color: var(--FONT-COLOR);
-    font-size: larger;
+    padding: 1rem;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--FONT-COLOR); /* Softer text color */
+
 }
 
 .Unordered__list li, .Ordered__list li {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: var(--FONT-COLOR);
+    display: list-item;
+    align-items: center; /* Only align the content */
+    text-align: left;
+
 }
 
 .Unordered__list h3, .Ordered__list h3 {
-    margin-bottom: 5px;
-    font-family: var(--FF-HEADINGS);
-}
-
-.Unordered__list p, .Ordered__list p {
+    font-size: 1.5em;
+    color: var(--FONT-COLOR);
     margin: 0;
-    font-size: 16px;
-    color: var(--CATEGORIES-PCOLOR);
 }
 
 .Unordered__list li::marker, .Ordered__list li::marker{
     font-size: 1.5em;
+    color: #00BFFF; /* Customize marker color */
 }
 
 .Unordered__Container:hover, .Ordered__Container:hover{
