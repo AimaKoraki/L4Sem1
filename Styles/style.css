@@ -54,9 +54,8 @@ button{
     --HERO-SBUTTON-COLOR:white;
     --HERO-SBUTTON-BCOLOR:#DDD;
     --LINK-ACTIVE: rgb(8, 58, 124);
-    --LINK-HOVER-BGCOLOR:#0c4249;
     --LINK-COLOR:#e0f2fe;
-    --LINK-HOVER:#5c8297 ;
+    --LINK-HOVER: #5ffbfe;  
     --LINK-HOVER-BGCOLOR:#051a29;
     --LIST-COLOR: #000;
     --NAV-BGCOLOR: #082f49;
@@ -480,26 +479,26 @@ a:active{
     margin: 0;
 }
 .ordered__list {
-    padding-left: 20px; /* Adds space for markers */
-    margin: 0; /* Resets margin but keeps padding for markers */
-    list-style-type:decimal; /* Ensures the list uses default style */
+    padding-left: 20px; 
+    margin: 0; 
+    list-style-type:decimal; 
 }
 .Unordered__list {
-    padding-left: 20px; /* Adds space for markers */
-    margin: 0; /* Resets margin but keeps padding for markers */
-    list-style-type: disc; /* Ensures the list uses default style */
+    padding-left: 20px; 
+    margin: 0;
+    list-style-type: disc; 
 }
 .Unordered__list h2, .Ordered__list h2 {
-    font-size: 1.8em;
+    font-size: 2rem;
     margin-bottom: 10px;
-    color: #00BFFF; /* Highlight color for headings */
+    color: #00BFFF; 
 }
 
 .Unordered__list p, .Ordered__list p {
     padding: 1rem;
     font-size: 16px;
     line-height: 1.5;
-    color: var(--FONT-COLOR); /* Softer text color */
+    color: var(--FONT-COLOR); 
 
 }
 
@@ -1131,7 +1130,21 @@ a:active{
 .faq__item.active .faq__answer {
     display: block;
 }
-
+.contact__support{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--GAMECARD-BGCOLOR);
+    padding: 20px;
+    border-radius: 20px;
+}
+.support__card i{
+    padding: 1rem;
+}
+.support__card i{
+    padding-right: 5px;
+}
 .form__container {
     display: flex;
     justify-content: center;
@@ -1158,7 +1171,9 @@ a:active{
     max-width: 400px;
     width: 100%;
   }
-  
+  .support__card p{
+    text-align: center;
+  }
   .contact__form label {
     text-align: left;
     margin-bottom: 0.5rem;
