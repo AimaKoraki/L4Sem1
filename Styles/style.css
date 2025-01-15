@@ -416,6 +416,12 @@ a:active{
     margin: 0;
 }
 
+.Unordered__list p, .Ordered__list p {
+    font-family: var(--FF);
+    color: var(--FONT-COLOR);
+    font-size: larger;
+}
+
 .Unordered__list li, .Ordered__list li {
     margin-bottom: 15px;
 }
@@ -423,7 +429,6 @@ a:active{
 .Unordered__list h3, .Ordered__list h3 {
     margin-bottom: 5px;
     font-family: var(--FF-HEADINGS);
-    font-size: 1.8em;
 }
 
 .Unordered__list p, .Ordered__list p {
