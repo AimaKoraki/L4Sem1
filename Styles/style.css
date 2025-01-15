@@ -41,6 +41,7 @@ button{
     --BUTTON-HOVER:#082f49;
     --BUTTON-COLOR-TEXT:#e0f2fe;
     --BUTTON-HOVER-TEXT:#e0f2fe;
+    --BUTTON-HOVER-BORDER:2px solid #e0f2fe;
     --BUTTON-HOVER-SHADOW:0px 4px 0px 0px #0284c7;
     --FONT-COLOR: #e0f2fe;
     --HEADER-BGCOLOR: #051a29;
@@ -308,6 +309,7 @@ a:active{
 .search-bar button:hover{
     background-color: var(--LINK-HOVER-BGCOLOR);
     color: var(--LINK-HOVER);
+    border: var(--BUTTON-HOVER-BORDER);
 }
 
 .search-bar button i {
@@ -513,6 +515,7 @@ a:active{
 .shop__button:hover {
     background-color: var(--BUTTON-HOVER);
     color: var(--BUTTON-HOVER-TEXT);
+    border: var(--BUTTON-HOVER-BORDER);
 }
 .Categories {
     text-align: center;
@@ -586,6 +589,7 @@ a:active{
 .CCB__Btutton:hover{
     background-color: var(--BUTTON-HOVER);
     color: var(--BUTTON-HOVER-TEXT);
+    border: var(--BUTTON-HOVER-BORDER);
 }
 
 /*------------------------------------------------ ||About Page ------------------------------------------------------------*/
