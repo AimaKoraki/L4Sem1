@@ -1,25 +1,24 @@
-/*||index*/
+/*||Navbar*/
 @media screen and (max-width: 1024px) {
-    .header__ul a:not(:first-child) {display: none;}
-    .header__ul a.icon {
-      float: right;
-      display: block;
-    }
-  }
-  
-  @media screen and (max-width: 1024px) {
+    .header__ul a:not(:first-child), .dropdown .dropbtn {display: none;}
+    .header__ul a.icon, .dropdown-content.responsive {display: block;}
+}
+
+@media screen and (max-width: 1024px) {
     .header__ul.responsive {position: relative;}
     .header__ul.responsive .icon {
       position: absolute;
       right: 0;
       top: 0;
     }
-    .header__ul.responsive a {
+    .header__ul.responsive a, .dropdown-content.responsive a {
       float: none;
       display: block;
       text-align: left;
     }
-  }
+}
+
+  
   /*||Footer*/
   @media (max-width: 768px) {
     .Footer__Content,
