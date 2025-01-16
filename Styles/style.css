@@ -495,19 +495,21 @@ a:active{
 }
 
 .Unordered__list p, .Ordered__list p {
-    padding: 1rem;
-    font-size: 16px;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
     line-height: 1.5;
     color: var(--FONT-COLOR); 
+    text-align: justify;
 
 }
 
 .Unordered__list li, .Ordered__list li {
+    margin-left: 0.9rem;
     margin-bottom: 10px;
     font-size: 18px;
     color: var(--FONT-COLOR);
     display: list-item;
-    align-items: center; /* Only align the content */
+    align-items: center; 
     text-align: left;
 
 }
@@ -519,8 +521,7 @@ a:active{
 }
 
 .Unordered__list li::marker, .Ordered__list li::marker{
-    font-size: 1.5em;
-    color: #00BFFF; /* Customize marker color */
+    color: #00BFFF;
 }
 
 .Unordered__Container:hover, .Ordered__Container:hover{
@@ -852,7 +853,9 @@ a:active{
     font-size: 16px;
     color: var(--CATEGORIES-PCOLOR);
 }
-
+.ABUnordered__list i{
+    padding-right: 10px;
+}
 .AboutUs__Table{
     width: 80%;
     margin: 0% auto;
