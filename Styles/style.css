@@ -36,10 +36,13 @@ button{
     --BGIMAGE: linear-gradient(to bottom, var(--BGCOLOR), var(--BGCOLOR-FADE));
     --BODY-BGCOLOR: #091e2c;
     --BORDER-COLOR: #082f49;
-    --BUTTON-COLOR: #0284c7;
-    --BUTTON-HOVER:#082f49;
-    --BUTTON-HOVER-SHADOW:0px 4px 0px 0px #0284c7;
+    --BUTTON-COLOR: #ff6600;
     --HEADING-FONT-COLOR:#e0f2fe;
+    --BUTTON-HOVER:#082f49;
+    --BUTTON-COLOR-TEXT:#e0f2fe;
+    --BUTTON-HOVER-TEXT:#e0f2fe;
+    --BUTTON-HOVER-BORDER:2px solid #e0f2fe;
+    --BUTTON-HOVER-SHADOW:0px 4px 0px 0px #0284c7;
     --FONT-COLOR: #e0f2fe;
     --HEADER-BGCOLOR: #051a29;
     --HEADER-COLOR: #FFF;
@@ -51,9 +54,8 @@ button{
     --HERO-SBUTTON-COLOR:white;
     --HERO-SBUTTON-BCOLOR:#DDD;
     --LINK-ACTIVE: rgb(8, 58, 124);
-    --LINK-HOVER-BGCOLOR:#0c4249;
     --LINK-COLOR:#e0f2fe;
-    --LINK-HOVER:#e0f2fe;
+    --LINK-HOVER: #5ffbfe;  
     --LINK-HOVER-BGCOLOR:#051a29;
     --LIST-COLOR: #000;
     --NAV-BGCOLOR: #082f49;
@@ -65,8 +67,6 @@ button{
     --FOOTER-NEWS-BUTTON-HOVER:#056596;
     --SOCIAL-LINKS-COLOR:#FFF;
     --SOCIAL-LINKS-HOVER:#0c5174;
-    --SHOP-BUTTON-COLOR:#ecf8ff;
-    --SHOP-BUTTON-HVCOLOR: #FFF;
     --GAMECARD-BGCOLOR:#122938;
     --ABContainer-COLOR:#0b2d42;
     --ABContainer-COLOR-HOVER:#010f1a;
@@ -120,7 +120,6 @@ a:hover, a:focus-visible{
 a:active{
     color: var(--LINK-ACTIVE);
 }
-
 /*--------------------------------------------------Header-----------------------------------------------------------------*/
 .header{
     display: grid;
@@ -169,7 +168,64 @@ a:active{
   .header__ul .icon {
     display: none;
   }
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
   
+  .dropdown .dropbtn {
+    font-size: 17px;    
+    border: none;
+    outline: none;
+    color:var(--HEADER-COLOR);
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--HEADER-BGCOLOR);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: var(--HEADER-COLOR);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }  
+  .dropdown-content.responsive {
+    display: block;
+    position: relative;
+    background-color: var(--HEADER-BGCOLOR);
+}
+
+.dropdown-content a {
+    float: none;
+    color: var(--HEADER-COLOR);
+    text-align: left;
+    padding: 14px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 17px;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--HEADER-COLOR-HOVER);
+    color: var(--HEADER-FCOLOR-HOVER);
+}
+
  /*--------------------------------------------------------------------------||Footer-----------------------------------------------------------------------------------------*/
 
  footer {
@@ -188,6 +244,7 @@ a:active{
 
 .Footer__Section h3 {
     margin-bottom: 1rem;
+    border-bottom: 2px solid #00BFFF;
 }
 
 .Social__Links {
@@ -204,7 +261,13 @@ a:active{
 .Social__Links a:hover {
     color: var(--SOCIAL-LINKS-HOVER);
 }
-
+.Quick__links{
+    display: grid;
+    gap: 0.5rem;
+}
+.Quick__links a{
+    text-decoration: none;
+}
 .Newsletter__Form {
     display: flex;
     gap: 0.5rem;
@@ -299,7 +362,7 @@ a:active{
     background-color:var(--BUTTON-COLOR);
     border: none;
     padding: 10px 12px;
-    color: var(--HERO-SBUTTON-COLOR);
+    color: var(--BUTTON-COLOR-TEXT);
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -309,6 +372,7 @@ a:active{
 .search-bar button:hover{
     background-color: var(--LINK-HOVER-BGCOLOR);
     color: var(--LINK-HOVER);
+    border: var(--BUTTON-HOVER-BORDER);
 }
 
 .search-bar button i {
@@ -414,25 +478,50 @@ a:active{
     padding: 0;
     margin: 0;
 }
-
-.Unordered__list li, .Ordered__list li {
-    margin-bottom: 15px;
+.ordered__list {
+    padding-left: 20px; 
+    margin: 0; 
+    list-style-type:decimal; 
 }
-
-.Unordered__list h3, .Ordered__list h3 {
-    margin-bottom: 5px;
-    font-family: var(--FF-HEADINGS);
-    font-size: 1.8em;
+.Unordered__list {
+    padding-left: 20px; 
+    margin: 0;
+    list-style-type: disc; 
+}
+.Unordered__list h2, .Ordered__list h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #00BFFF; 
 }
 
 .Unordered__list p, .Ordered__list p {
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    line-height: 1.5;
+    color: var(--FONT-COLOR); 
+    text-align: justify;
+
+}
+
+.Unordered__list li, .Ordered__list li {
+    margin-left: 0.9rem;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: var(--FONT-COLOR);
+    display: list-item;
+    align-items: center; 
+    text-align: left;
+
+}
+
+.Unordered__list h3, .Ordered__list h3 {
+    font-size: 1.5em;
+    color: var(--FONT-COLOR);
     margin: 0;
-    font-size: 16px;
-    color: var(--CATEGORIES-PCOLOR);
 }
 
 .Unordered__list li::marker, .Ordered__list li::marker{
-    font-size: 1.5em;
+    color: #00BFFF;
 }
 
 .Unordered__Container:hover, .Ordered__Container:hover{
@@ -499,11 +588,12 @@ a:active{
 
 .shop__button {
     background-color: var(--BUTTON-COLOR);
-    color: var(--SHOP-BUTTON-COLOR);
+    color: var(--BUTTON-COLOR-TEXT);
     padding: 0.5rem 1rem;
     border: none;
     border-radius: 5px;
     font-size: 0.9rem;
+    font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease;
     text-decoration: none;
@@ -512,7 +602,8 @@ a:active{
 
 .shop__button:hover {
     background-color: var(--BUTTON-HOVER);
-    color: var(--SHOP-BUTTON-HVCOLOR);
+    color: var(--BUTTON-HOVER-TEXT);
+    border: var(--BUTTON-HOVER-BORDER);
 }
 .Categories {
     text-align: center;
@@ -571,11 +662,12 @@ a:active{
 
 .CCB__Btutton{
     background-color: var(--BUTTON-COLOR);
-    color: var(--white);
+    color: var(--BUTTON-COLOR-TEXT);
     padding: 0.8rem 2rem;
     border: none;
     border-radius: 5px;
     font-size: 1rem;
+    font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease;
     text-decoration: none;
@@ -583,8 +675,9 @@ a:active{
     margin-top: auto;
 }
 .CCB__Btutton:hover{
-    background-color: var(--LINK-HOVER-BGCOLOR);
-    color: var(--LINK-HOVER);
+    background-color: var(--BUTTON-HOVER);
+    color: var(--BUTTON-HOVER-TEXT);
+    border: var(--BUTTON-HOVER-BORDER);
 }
 
 /*------------------------------------------------ ||About Page ------------------------------------------------------------*/
@@ -659,6 +752,49 @@ a:active{
     margin-bottom: 1rem;
 
 }
+.values__section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    padding-bottom: 1rem;
+    text-align: center;
+    background-color: var(--BGCOLOR);
+    border-radius: 20px;
+}
+.values__section h2{
+    margin-bottom: 10px;
+}
+.values__grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.value__card {
+    background: var(--GAMECARD-BGCOLOR);
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+.value__card:hover{
+    transform: translateY(-5px);
+}
+.value__card h3 {
+    font-size: 1.5em;
+    margin-bottom: 0.5rem;
+    color: #00BFFF;
+}
+
+.value__card p {
+    font-size: 1em;
+    color: var(--FONT-COLOR); 
+}
+
 .ABContent__Wrapper {
     display: grid;
     place-items: center; 
@@ -719,7 +855,9 @@ a:active{
     font-size: 16px;
     color: var(--CATEGORIES-PCOLOR);
 }
-
+.ABUnordered__list i{
+    padding-right: 10px;
+}
 .AboutUs__Table{
     width: 80%;
     margin: 0% auto;
@@ -1038,7 +1176,21 @@ a:active{
 .faq__item.active .faq__answer {
     display: block;
 }
-
+.contact__support{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--GAMECARD-BGCOLOR);
+    padding: 20px;
+    border-radius: 20px;
+}
+.support__card i{
+    padding: 1rem;
+}
+.support__card i{
+    padding-right: 5px;
+}
 .form__container {
     display: flex;
     justify-content: center;
@@ -1065,7 +1217,9 @@ a:active{
     max-width: 400px;
     width: 100%;
   }
-  
+  .support__card p{
+    text-align: center;
+  }
   .contact__form label {
     text-align: left;
     margin-bottom: 0.5rem;
