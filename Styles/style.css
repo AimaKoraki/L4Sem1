@@ -810,14 +810,15 @@ a:active{
     border-radius: 20px;
 }
 .values__section h2{
-    margin-bottom: 10pxa;
+    margin-bottom: 15px;
+    border-bottom: 2px 
 }
 .values__grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    max-width: 1200px;
+    max-width: 1400px;
     width: 100%;
 }
 
