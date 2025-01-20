@@ -72,6 +72,7 @@ button{
     --ABContainer-COLOR-HOVER:#010f1a;
     --PRODUCTS-COLOR:#122938;
     --GAME-PRICE:#2ecc71;
+    --DISCRIPTION-BOX-SHADOW: 0 4px 6px rgba(0, 0, 0, 0.1);
 
     /* BORDERS */
     --BORDERS: 1px solid var(--BORDER-COLOR);
@@ -679,8 +680,26 @@ a:active{
     color: var(--BUTTON-HOVER-TEXT);
     border: var(--BUTTON-HOVER-BORDER);
 }
+/*Section Area*/
+.home__section{
+    display: grid;
+    place-items: center;
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto; 
+    background-color: var(--CATEGORIES-COLOR);
+    border-radius: 20px;
+    box-shadow: var(--DISCRIPTION-BOX-SHADOW);
 
-/*------------------------------------------------ ||About Page ------------------------------------------------------------*/
+}
+.home__section h2{
+    text-align: center;
+}
+.home__section__Dis p{
+    margin: 1rem;
+    text-align: justify;
+}
+/*------------------{------------------------------ ||About Page ------------------------------------------------------------*/
 .page__header{
     padding-left: 1rem;
     border-bottom: 1px solid ;
@@ -763,7 +782,7 @@ a:active{
     border-radius: 20px;
 }
 .values__section h2{
-    margin-bottom: 10px;
+    margin-bottom: 10pxa;
 }
 .values__grid {
     display: flex;
