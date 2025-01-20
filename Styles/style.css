@@ -39,7 +39,7 @@ button{
     --BUTTON-COLOR: #ff6600;
     --HEADING-FONT-COLOR:#e0f2fe;
     --BUTTON-HOVER:#082f49;
-    --BUTTON-COLOR-TEXT:#e0f2fe;
+    --BUTTON-COLOR-TEXT:white;
     --BUTTON-HOVER-TEXT:#e0f2fe;
     --BUTTON-HOVER-BORDER:2px solid #e0f2fe;
     --BUTTON-HOVER-SHADOW:0px 4px 0px 0px #0284c7;
@@ -73,6 +73,7 @@ button{
     --PRODUCTS-COLOR:#122938;
     --GAME-PRICE:#2ecc71;
     --DISCRIPTION-BOX-SHADOW: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --PRICE-BUTTON-COLOR:#1E7E34;
 
     /* BORDERS */
     --BORDERS: 1px solid var(--BORDER-COLOR);
@@ -555,7 +556,7 @@ a:active{
 .product__card {
     background-color: var(--PRODUCTS-COLOR);
     border-radius: 14px;
-    padding: 1.5rem;
+    padding: 1rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
     display: flex;
@@ -811,7 +812,7 @@ a:active{
 }
 .values__section h2{
     margin-bottom: 15px;
-    border-bottom: 2px 
+    border-bottom: 2px solid white;
 }
 .values__grid {
     display: flex;
@@ -932,8 +933,8 @@ a:active{
     padding-left: 1rem;
     padding-bottom: 2rem;
 }
-.Upcoming__dis{
-    padding-top: 1rem;
+.Upcoming__dis, .page__dis{
+    padding: 1rem;
 }
 .timeline {
     max-width: 800px;
@@ -1063,11 +1064,33 @@ a:active{
     padding: 1rem;
     text-align: center;
 }
+.shop__buttons{
+    display: grid;
+    height: 100%; 
+    padding: 1rem;
+}
 .peripherals__products img{
     background-color: white;
 }
-
-
+.shop__buttons__Container {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    gap: 1rem; 
+}
+.price__box{
+    background-color: var(--PRICE-BUTTON-COLOR);
+    color: var(--BUTTON-COLOR-TEXT);
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    align-self: flex-end; 
+}
 /*-------------------------------------------------||Game Page---------------------------------------------------------*/
 .Gpage-header {
     gap: 2rem; 
