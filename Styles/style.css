@@ -576,25 +576,25 @@ a:active{
 
 .shop__buttons {
     display: flex;
-    flex-direction: column; /* Stack the elements vertically */
-    gap: 1rem; /* Add space between elements */
+    flex-direction: column;
+    gap: 1rem;
     padding: 1rem 0;
 }
 
 .shop__buttons__Container {
     display: flex;
-    flex-direction: column; /* Stack price and button vertically */
+    flex-direction: column; 
     align-items: center;
-    gap: 0.5rem; /* Add spacing between the price and button */
+    gap: 0.5rem;
 }
 
 .price__box {
     display: flex;
-    flex-direction: column; /* Stack price and cut-price */
-    align-items: center; /* Center align text */
-    justify-content: center; /* Center content vertically */
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
     gap: 0.2rem;
-    width: 100%; /* Make it take the full width of the card */
+    width: 100%; 
     padding: 0.5rem 0;
     background-color: var(--PRICE-BUTTON-COLOR);
     color: var(--BUTTON-COLOR-TEXT);
@@ -603,7 +603,7 @@ a:active{
     font-weight: bold;
     transition: background-color 0.3s ease;
     text-decoration: none;
-    box-sizing: border-box; /* Ensure padding doesn't affect width */
+    box-sizing: border-box;
     opacity: 0;
 }
 
@@ -630,7 +630,7 @@ a:active{
     cursor: pointer;
     transition: background-color 0.3s ease;
     text-decoration: none;
-    width: 100%; /* Optional: Make button width consistent */
+    width: 100%; 
     text-align: center;
 }
 .product__card:hover .price__box{
