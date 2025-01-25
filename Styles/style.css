@@ -306,7 +306,7 @@ a:active{
 
 /*||Intro*/
 .Hero {
-    background-image: url('../images/banner.jpg');
+    background-image: url('../images/banner.webp');
     background-size: cover;
     background-attachment: fixed; 
     background-position: center;
