@@ -488,13 +488,13 @@ a:active{
     margin: 0;
     list-style-type: disc; 
 }
-.Unordered__list h2, .Ordered__list h2 {
+.Unordered__section h2, .Ordered__section h2 {
     font-size: 2rem;
     margin-bottom: 10px;
     color: #00BFFF; 
 }
 
-.Unordered__list p, .Ordered__list p {
+.Unordered__section p, .Ordered__section p {
     padding-bottom: 1rem;
     padding-top: 1rem;
     line-height: 1.5;
