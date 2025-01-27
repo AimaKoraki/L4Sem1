@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Console</title>
-    <link rel="manifest" href="./manifestandIcons/manifest.json">
     <link rel="stylesheet" href="./Styles/style.css">
     <link rel="stylesheet" href="./Styles/responsive.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,7 +13,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    <link rel="icon" type="image/png" href="./manifestandIcons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./manifestandIcons/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./manifestandIcons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="GameSphere" />
+    <link rel="manifest" href="./manifestandIcons/site.webmanifest" />
 </head>
 <body>
     <header class="header">
@@ -51,6 +55,14 @@
             <h1>Consoles</h1>
             <p>Discover your next gaming adventure with out Consoles</p>
         </section>
+    <div class="page__dis">
+        <div class="dis__Box">
+            <p>Discover the ultimate gaming experience with our range of cutting-edge consoles. The PlayStation 5 offers lightning-fast load times, stunning 4K graphics, 
+            and immersive gameplay with its innovative DualSense controller, perfect for next-gen gaming enthusiasts. The Xbox Series X, the most powerful console ever, 
+            delivers exceptional performance with 4K resolution, smooth framerates, and advanced ray tracing for breathtaking visuals. For versatility and fun on the go, the Nintendo Switch provides seamless transitions between handheld, TV, and tabletop modes, making it ideal for gamers of all ages. Whether at home or on the move, find your perfect gaming companion here.</p>
+        </div>
+    </div>
+    
     <!--||Featured section of the consoles page-->
         <section class="featured__products">
             <h2>Featured Products</h2>
@@ -60,21 +72,42 @@
                     <h3>PlayStation 5</h3>
                     <p>Experience next-gen gaming</p>
                     <span class="price">$499.99</span>
-                    <button class="shop__button">Add to Cart</button>
+                    <div class="shop__buttons">
+                        <div class="shop__buttons__Container">
+                                <div class="price__box">
+                                    <span class="price">$299.99</span>
+                                </div>            
+                                <button class="shop__button">Add to Cart</button>
+                        </div>
+                    </div>
                 </div>
                 <div class="product__card">
                     <img src="./images/Xbox.webp" alt="Xbox Series X">
                     <h3>Xbox Series X</h3>
                     <p>Power your dreams</p>
                     <span class="price">$499.99</span>
-                    <button class="shop__button">Add to Cart</button>
+                    <div class="shop__buttons">
+                        <div class="shop__buttons__Container">
+                                <div class="price__box">
+                                    <span class="price">$299.99</span>
+                                </div>            
+                                <button class="shop__button">Add to Cart</button>
+                        </div>
+                    </div>
                 </div>
                 <div class="product__card">
                     <img src="./images/Nintendo.webp" alt="Nintendo Switch">
                     <h3>Nintendo Switch</h3>
                     <p>Play anywhere, anytime</p>
                     <span class="price">$299.99</span>
-                    <button class="shop__button">Add to Cart</button>
+                    <div class="shop__buttons">
+                        <div class="shop__buttons__Container">
+                                <div class="price__box">
+                                    <span class="price">$299.99</span>
+                                </div>            
+                                <button class="shop__button">Add to Cart</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -86,22 +119,40 @@
                     <img src="./images/consoles/XboxSeriesS-1TB(White).webp" alt="Xbox Series S - 1TB (White)">
                     <h3>Xbox Series S - 1TB (White)</h3>
                     <p>Experience next__gen gaming</p>
-                    <span class="price">$499.99</span>
-                    <button class="shop__button">Add to Cart</button>
+                    <div class="shop__buttons">
+                        <div class="shop__buttons__Container">
+                                <div class="price__box">
+                                    <span class="price">$299.99</span>
+                                </div>            
+                                <button class="shop__button">Add to Cart</button>
+                        </div>
+                    </div>
                 </div>
                 <div class="product__card">
                     <img src="./images/consoles/XboxSeriesX-1TBGalaxyBSE.webp" alt="Xbox Series X - 1TB Digital Edition (White)">
                     <h3>Xbox Series X - 1TB Digital Edition (White)</h3>
                     <p>Power your dreams</p>
-                    <span class="price">$499.99</span>
-                    <button class="shop__button">Add to Cart</button>
+                    <div class="shop__buttons">
+                        <div class="shop__buttons__Container">
+                                <div class="price__box">
+                                    <span class="price">$299.99</span>
+                                </div>            
+                                <button class="shop__button">Add to Cart</button>
+                        </div>
+                    </div>
                 </div>
                 <div class="product__card">
                     <img src="./images/consoles/XboxSeriesX_2TB_GBEdition.webp" alt="Xbox Series X - 2TB Galaxy Black Special Edition">
                     <h3>Xbox Series X - 2TB Galaxy Black Special Edition</h3>
                     <p>Play anywhere, anytime</p>
-                    <span class="price">$299.99</span>
-                    <button class="shop__button">Add to Cart</button>
+                    <div class="shop__buttons">
+                        <div class="shop__buttons__Container">
+                                <div class="price__box">
+                                    <span class="price">$299.99</span>
+                                </div>            
+                                <button class="shop__button">Add to Cart</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -113,22 +164,40 @@
                     <img src="./images/consoles/Switch-OLED.webp" alt="Nintendo Switch OLED">
                     <h3>Nintendo Switch OLED </h3>
                     <p>Experience next__gen gaming</p>
-                    <span class="price">$499.99</span>
-                    <button class="shop__button">Add to Cart</button>
+                    <div class="shop__buttons">
+                        <div class="shop__buttons__Container">
+                                <div class="price__box">
+                                    <span class="price">$299.99</span>
+                                </div>            
+                                <button class="shop__button">Add to Cart</button>
+                        </div>
+                    </div>
                 </div>
                 <div class="product__card">
                     <img src="./images/consoles/Nintendo-Switch-lite-3.webp" alt="Nintendo Switch Lite">
                     <h3>Nintendo Switch Lite</h3>
                     <p>Power your dreams</p>
-                    <span class="price">$499.99</span>
-                    <button class="shop__button">Add to Cart</button>
+                    <div class="shop__buttons">
+                        <div class="shop__buttons__Container">
+                                <div class="price__box">
+                                    <span class="price">$299.99</span>
+                                </div>            
+                                <button class="shop__button">Add to Cart</button>
+                        </div>
+                    </div>
                 </div>
                 <div class="product__card">
                     <img src="./images/Nintendo.webp" alt="Nintendo Switch">
                     <h3>Nintendo Switch</h3>
                     <p>Play anywhere, anytime</p>
-                    <span class="price">$299.99</span>
-                    <button class="shop__button">Add to Cart</button>
+                    <div class="shop__buttons">
+                        <div class="shop__buttons__Container">
+                                <div class="price__box">
+                                    <span class="price">$299.99</span>
+                                </div>            
+                                <button class="shop__button">Add to Cart</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -141,26 +210,45 @@
                     <h3>PlayStation 5</h3>
                     <p>Experience next__gen gaming</p>
                     <span class="price">$499.99</span>
-                    <button class="shop__button">Add to Cart</button>
+                    <div class="shop__buttons">
+                        <div class="shop__buttons__Container">
+                                <div class="price__box">
+                                    <span class="price">$299.99</span>
+                                </div>            
+                                <button class="shop__button">Add to Cart</button>
+                        </div>
+                    </div>
                 </div>
                 <div class="product__card">
                     <img src="./images/consoles/pS4.webp" alt="PlayStation 4">
                     <h3>PlayStation 4</h3>
                     <p>Power your dreams</p>
                     <span class="price">$499.99</span>
-                    <button class="shop__button">Add to Cart</button>
+                    <div class="shop__buttons">
+                        <div class="shop__buttons__Container">
+                                <div class="price__box">
+                                    <span class="price">$299.99</span>
+                                </div>            
+                                <button class="shop__button">Add to Cart</button>
+                        </div>
+                    </div>
                 </div>
                 <div class="product__card">
                     <img src="./images/consoles/ps3_60gb_pak__37675.webp" alt="PlayStation 3">
                     <h3>PlayStation 3</h3>
                     <p>Play anywhere, anytime</p>
-                    <span class="price">$299.99</span>
-                    <button class="shop__button">Add to Cart</button>
+                    <div class="shop__buttons">
+                        <div class="shop__buttons__Container">
+                                <div class="price__box">
+                                    <span class="price">$299.99</span>
+                                </div>            
+                                <button class="shop__button">Add to Cart</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
-</main>
 <footer>
 <!--Footer of the website-->
 <div class="Footer__Content">

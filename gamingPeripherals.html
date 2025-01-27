@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gaming Peripherals</title>
-    <link rel="manifest" href="./manifestandIcons/manifest.json">
     <link rel="stylesheet" href="./Styles/style.css">
     <link rel="stylesheet" href="./Styles/responsive.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,7 +13,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    <link rel="icon" type="image/png" href="./manifestandIcons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./manifestandIcons/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./manifestandIcons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="GameSphere" />
+    <link rel="manifest" href="./manifestandIcons/site.webmanifest" />
 </head>
 <body>
     <header class="header">
@@ -51,29 +55,54 @@
             <h1>Gaming Peripherals</h1>
             <p>Enhance your next gaming experience using our brand new Gaming Peripherals</p>
         </section>
+        <div class="page__dis">
+            <div class="dis__Box">
+                <p>Enhance your gaming setup with our premium range of gaming peripherals. From high-performance controllers designed for precision and comfort to immersive headsets delivering crystal-clear audio, 
+                    we have everything you need for an edge in gaming. Explore versatile charging docks, ergonomic keyboards, responsive mice, and durable carrying cases to keep your gear protected and organized. Whether you're a casual gamer or a professional, 
+                    our gaming peripherals are tailored to elevate your experience and keep you at the top of your game.</p>
+            </div>
+        </div>
         <section class="peripherals__products">
             <h2>Featured Products</h2>
             <div class="product__grid">
                 <div class="product__card">
                     <img src="./images/gamingPeripherals/dualsense-controllers-image-block-02-en-06sep23.webp" alt="PS5 Console">
-                    <h3>PlayStation 5Controllers</h3>
+                    <h3>PlayStation 5 Controllers</h3>
                     <p>Buy a pair to enjoy gaming with your friend</p>
-                        <span class="price">$299.99</span>
-                        <button class="shop__button">Add to Cart</button>
+                    <div class="shop__buttons">
+                        <div class="shop__buttons__Container">
+                                <div class="price__box">
+                                    <span class="price">$299.99</span>
+                                </div>            
+                                <button class="shop__button">Add to Cart</button>
+                        </div>
+                    </div>
                 </div>
                 <div class="product__card">
                     <img src="./images/gamingPeripherals/XboxSeries2-ft.webp" alt="Xbox Series X">
-                    <h3>Xbox Elite Wireless Controller Series 2</h3>
-                    <p>Play like a Pro</p>
-                    <span class="Cutprice">$179.99</span>
-                    <span class="price">$159.99</span>
-                    <button class="shop__button">Add to Cart</button>
+                    <h3>Xbox Elite Wireless Controller Series</h3>
+                    <p>Play like a Pro with Xbox</p>
+                    <div class="shop__buttons">
+                        <div class="shop__buttons__Container">
+                                <div class="price__box">
+                                    <span class="price">$299.99</span>
+                                </div>            
+                                <button class="shop__button">Add to Cart</button>
+                        </div>
+                    </div>
                 </div>
                 <div class="product__card">
-                    <img src="./images/Nintendo.webp" alt="Nintendo Switch">
-                    <h3>Nintendo Switch</h3>
-                    <span class="price">$299.99</span>
-                    <button class="shop__button">Add to Cart</button>
+                    <img src="./images/gamingPeripherals/PULSE-Elite-headset-thumbnail-02-en-12sep23.webp" alt="PULSE Elite™ wireless headset">
+                    <h3>PULSE Elite™ wireless headset</h3>
+                    <p>Enhance  your experinace with PULSE Elite™ wireless headset</p>
+                    <div class="shop__buttons">
+                        <div class="shop__buttons__Container">
+                                <div class="price__box">
+                                    <span class="price">$299.99</span>
+                                </div>            
+                                <button class="shop__button">Add to Cart</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -83,50 +112,98 @@
                 <div class="product__card">
                     <img src="./images/gamingPeripherals/Xbox-Elite-Wireless-(White).webp" alt="PS5 Console">
                     <h3>Xbox Elite Wireless Controller Series 2 - Core (White)</h3>
-                    <span class="price">$499.99</span>
-                    <button class="shop__button">Add to Cart</button>
+                    <div class="shop__buttons">
+                        <div class="shop__buttons__Container">
+                                <div class="price__box">
+                                    <span class="price">$299.99</span>
+                                </div>            
+                                <button class="shop__button">Add to Cart</button>
+                        </div>
+                    </div>
                 </div>
                 <div class="product__card">
                     <img src="./images/gamingPeripherals/Xbox-fallout.webp" alt="Xbox Series X">
                     <h3>Xbox Elite Wireless Controller Series 2 - Fallout</h3>
-                    <span class="price">$499.99</span>
-                    <button class="shop__button">Add to Cart</button>
+                    <div class="shop__buttons">
+                        <div class="shop__buttons__Container">
+                                <div class="price__box">
+                                    <span class="price">$299.99</span>
+                                </div>            
+                                <button class="shop__button">Add to Cart</button>
+                        </div>
+                    </div>
                 </div>
                 <div class="product__card">
                     <img src="./images/gamingPeripherals/XboxS2.webp" alt="Nintendo Switch">
                     <h3>Xbox Elite Wireless Controller Series 2</h3>
-                    <span class="price">$299.99</span>
-                    <button class="shop__button">Add to Cart</button>
+                    <div class="shop__buttons">
+                        <div class="shop__buttons__Container">
+                                <div class="price__box">
+                                    <span class="price">$299.99</span>
+                                </div>            
+                                <button class="shop__button">Add to Cart</button>
+                        </div>
+                    </div>
                 </div>
                 <div class="product__card">
                     <img src="./images/gamingPeripherals/XboxSpecial-Edition.webp" alt="Nintendo Switch">
                     <h3>Xbox Wireless Controller – Mineral Camo Special Edition</h3>
-                    <span class="price">$299.99</span>
-                    <button class="shop__button">Add to Cart</button>
+                    <div class="shop__buttons">
+                        <div class="shop__buttons__Container">
+                                <div class="price__box">
+                                    <span class="price">$299.99</span>
+                                </div>            
+                                <button class="shop__button">Add to Cart</button>
+                        </div>
+                    </div>
                 </div>
                 <div class="product__card">
                     <img src="./images/gamingPeripherals/XboxRobot-White.webp" alt="Nintendo Switch">
                     <h3>Xbox Wireless Controller – Robot White</h3>
-                    <span class="price">$299.99</span>
-                    <button class="shop__button">Add to Cart</button>
+                    <div class="shop__buttons">
+                        <div class="shop__buttons__Container">
+                                <div class="price__box">
+                                    <span class="price">$299.99</span>
+                                </div>            
+                                <button class="shop__button">Add to Cart</button>
+                        </div>
+                    </div>
                 </div>
                 <div class="product__card">
                     <img src="./images/gamingPeripherals/XboxGreen.webp" alt="Nintendo Switch">
                     <h3>Xbox Elite Wireless Controller Series 2 - Carrying Case and</h3>
-                    <span class="price">$299.99</span>
-                    <button class="shop__button">Add to Cart</button>
+                    <div class="shop__buttons">
+                        <div class="shop__buttons__Container">
+                                <div class="price__box">
+                                    <span class="price">$299.99</span>
+                                </div>            
+                                <button class="shop__button">Add to Cart</button>
+                        </div>
+                    </div>
                 </div>
                 <div class="product__card">
                     <img src="./images/gamingPeripherals/XboxAll.webp" alt="Nintendo Switch">
                     <h3>Xbox Elite Wireless Controller Series 2 - Everything Pack</h3>
-                    <span class="price">$299.99</span>
-                    <button class="shop__button">Add to Cart</button>
+                    <div class="shop__buttons">
+                        <div class="shop__buttons__Container">
+                                <div class="price__box">
+                                    <span class="price">$299.99</span>
+                                </div>            
+                                <button class="shop__button">Add to Cart</button>
+                        </div>
+                    </div>
                 </div>
                 <div class="product__card">
                     <img src="./images/gamingPeripherals/Xbox-Wireless-Headset.webp" alt="Nintendo Switch">
                     <h3>Xbox Wireless Headset</h3>
-                    <span class="price">$299.99</span>
-                    <button class="shop__button">Add to Cart</button>
+                    <div class="shop__buttons">
+                        <div class="shop__buttons__Container">
+                                <div class="price__box">
+                                    <span class="price">$299.99</span>
+                                </div>            
+                                <button class="shop__button">Add to Cart</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -136,49 +213,94 @@
                 <div class="product__card">
                     <img src="./images/gamingPeripherals/dualsense-image-block-01-en-21mar23.webp" alt="PS5 Controller">
                     <h3>DualSense® wireless controller</h3>
-                    <span class="price">$49.99</span>
-                    <button class="shop__button">Add to Cart</button>
+                    <div class="shop__buttons">
+                        <div class="shop__buttons__Container">
+                                <div class="price__box">
+                                    <span class="price">$299.99</span>
+                                </div>            
+                                <button class="shop__button">Add to Cart</button>
+                        </div>
+                    </div>
                 </div>
                 <div class="product__card">
                     <img src="./images/gamingPeripherals/DualSense-Edge-image-block-01-en-12sep22.webp" alt="PS5 Controller">
                     <h3>DualSense Edge™ wireless controller</h3>
-                    <span class="price">$99.99</span>
-                    <button class="shop__button">Add to Cart</button>
+                    <div class="shop__buttons">
+                        <div class="shop__buttons__Container">
+                                <div class="price__box">
+                                    <span class="price">$299.99</span>
+                                </div>            
+                                <button class="shop__button">Add to Cart</button>
+                        </div>
+                    </div>
                 </div>
                 <div class="product__card">
                     <img src="./images/gamingPeripherals/PULSE-Explore-earbuds-thumbnail-01-en-12sep23.webp" alt="wireless earbuds">
                     <h3>PULSE Explore™ wireless earbuds</h3>
-                    <span class="price">$29.99</span>
-                    <button class="shop__button">Add to Cart</button>
+                    <div class="shop__buttons">
+                        <div class="shop__buttons__Container">
+                                <div class="price__box">
+                                    <span class="price">$299.99</span>
+                                </div>            
+                                <button class="shop__button">Add to Cart</button>
+                        </div>
+                    </div>
                 </div>
                 <div class="product__card">
                     <img src="./images/gamingPeripherals/access-controller-image-block-01-en-12may23.webp" alt="PS5 Controller">
                     <h3>Access™ controller</h3>
                     <span class="price">$49.99</span>
-                    <button class="shop__button">Add to Cart</button>
+                    <div class="shop__buttons">
+                        <div class="shop__buttons__Container">
+                                <div class="price__box">
+                                    <span class="price">$299.99</span>
+                                </div>            
+                                <button class="shop__button">Add to Cart</button>
+                        </div>
+                    </div>
                 </div>
                 <div class="product__card">
                     <img src="./images/gamingPeripherals/ps5-vertical-stand-image-block-01-en-22nov23.webp" alt="DualSense charging station">
                     <h3>Vertical Stand for PS5 consoles</h3>
                     <span class="price">$199.99</span>
-                    <button class="shop__button">Add to Cart</button>
+                    <div class="shop__buttons">
+                        <div class="shop__buttons__Container">
+                                <div class="price__box">
+                                    <span class="price">$299.99</span>
+                                </div>            
+                                <button class="shop__button">Add to Cart</button>
+                        </div>
+                    </div>
                 </div>
                 <div class="product__card">
                     <img src="./images/gamingPeripherals/seagate-external-ssd-product-thumbnail-01-en-03dec24.webp" alt="External SSD drives">
                     <h3>External SSD drives for PS4 and PS5 consoles</h3>
                     <span class="price">$129.99</span>
-                    <button class="shop__button">Add to Cart</button>
+                    <div class="shop__buttons">
+                        <div class="shop__buttons__Container">
+                                <div class="price__box">
+                                    <span class="price">$299.99</span>
+                                </div>            
+                                <button class="shop__button">Add to Cart</button>
+                        </div>
+                    </div>
                 </div>
                 <div class="product__card">
                     <img src="./images/gamingPeripherals/PULSE-Elite-headset-thumbnail-02-en-12sep23.webp" alt="PS5 Headset">
                     <h3>PULSE Elite™ wireless headset</h3>
                     <span class="price">$69.99</span>
-                    <button class="shop__button">Add to Cart</button>
+                    <div class="shop__buttons">
+                        <div class="shop__buttons__Container">
+                                <div class="price__box">
+                                    <span class="price">$299.99</span>
+                                </div>            
+                                <button class="shop__button">Add to Cart</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
-</main>
 <footer>
 <!--Footer of the website-->
 <div class="Footer__Content">
