@@ -50,246 +50,41 @@
             </nav>
         </div>       
     </header>
-
+    <a href="./cart.html">
+        <div class="cart-counter">
+            🛒 Cart: <span id="cartCount">0</span> items
+        </div>
+        <button>View Cart</button>
+    </a>
     <div id="productSelection">
         <h2>Select Your Computer Parts</h2>
-
-        <!-- Processors -->
-        <h3>Processors</h3>
-        <div class="product__grid">
-            <div class="product__card">
-                <img src="images/intel-i5.jpg" alt="Intel i5">
-                <h4>Intel i5</h4>
-                <p>$200</p>
-                <button onclick="addToCart('Intel i5', 200)">Add to Cart</button>
-            </div>
-            <div class="product__card">
-                <img src="images/intel-i7.jpg" alt="Intel i7">
-                <h4>Intel i7</h4>
-                <p>$300</p>
-                <button onclick="addToCart('Intel i7', 300)">Add to Cart</button>
-            </div>
-            <div class="product__card">
-                <img src="images/ryzen-5.jpg" alt="AMD Ryzen 5">
-                <h4>AMD Ryzen 5</h4>
-                <p>$250</p>
-                <button onclick="addToCart('AMD Ryzen 5', 250)">Add to Cart</button>
-            </div>
-            <div class="product__card">
-                <img src="images/intel-i5.jpg" alt="Intel i5">
-                <h4>Intel i5</h4>
-                <p>$200</p>
-                <button onclick="addToCart('Intel i5', 200)">Add to Cart</button>
-            </div>
-            <div class="product__card">
-                <img src="images/intel-i7.jpg" alt="Intel i7">
-                <h4>Intel i7</h4>
-                <p>$300</p>
-                <button onclick="addToCart('Intel i7', 300)">Add to Cart</button>
-            </div>
-            <div class="product__card">
-                <img src="images/ryzen-5.jpg" alt="AMD Ryzen 5">
-                <h4>AMD Ryzen 5</h4>
-                <p>$250</p>
-                <button onclick="addToCart('AMD Ryzen 5', 250)">Add to Cart</button>
-            </div>
-        </div>
-
-        <!-- Graphics Cards -->
-        <h3>Graphics Cards</h3>
-        <div class="product__grid">
-            <div class="product__card">
-                <img src="images/rtx-3060.jpg" alt="NVIDIA RTX 3060">
-                <h4>NVIDIA RTX 3060</h4>
-                <p>$400</p>
-                <button onclick="addToCart('NVIDIA RTX 3060', 400)">Add to Cart</button>
-            </div>
-            <div class="product__card">
-                <img src="images/rx-6600.jpg" alt="AMD RX 6600">
-                <h4>AMD RX 6600</h4>
-                <p>$350</p>
-                <button onclick="addToCart('AMD RX 6600', 350)">Add to Cart</button>
-            </div>
-            <div class="product__card">
-                <img src="images/rtx-3060.jpg" alt="NVIDIA RTX 3060">
-                <h4>NVIDIA RTX 3060</h4>
-                <p>$400</p>
-                <button onclick="addToCart('NVIDIA RTX 3060', 400)">Add to Cart</button>
-            </div>
-            <div class="product__card">
-                <img src="images/rx-6600.jpg" alt="AMD RX 6600">
-                <h4>AMD RX 6600</h4>
-                <p>$350</p>
-                <button onclick="addToCart('AMD RX 6600', 350)">Add to Cart</button>
-            </div>
-            <div class="product__card">
-                <img src="images/rtx-3060.jpg" alt="NVIDIA RTX 3060">
-                <h4>NVIDIA RTX 3060</h4>
-                <p>$400</p>
-                <button onclick="addToCart('NVIDIA RTX 3060', 400)">Add to Cart</button>
-            </div>
-            <div class="product__card">
-                <img src="images/rx-6600.jpg" alt="AMD RX 6600">
-                <h4>AMD RX 6600</h4>
-                <p>$350</p>
-                <button onclick="addToCart('AMD RX 6600', 350)">Add to Cart</button>
-            </div>
-        </div>
-
-        <!-- Motherboards -->
-        <h3>Motherboards</h3>
-        <div class="product__grid">
-            <div class="product__card">
-                <img src="images/asus-b550.jpg" alt="ASUS B550">
-                <h4>ASUS B550</h4>
-                <p>$180</p>
-                <button onclick="addToCart('ASUS B550', 180)">Add to Cart</button>
-            </div>
-            <div class="product__card">
-                <img src="images/msi-b450.jpg" alt="MSI B450">
-                <h4>MSI B450</h4>
-                <p>$140</p>
-                <button onclick="addToCart('MSI B450', 140)">Add to Cart</button>
-            </div>
-            <div class="product__card">
-                <img src="images/asus-b550.jpg" alt="ASUS B550">
-                <h4>ASUS B550</h4>
-                <p>$180</p>
-                <button onclick="addToCart('ASUS B550', 180)">Add to Cart</button>
-            </div>
-            <div class="product__card">
-                <img src="images/msi-b450.jpg" alt="MSI B450">
-                <h4>MSI B450</h4>
-                <p>$140</p>
-                <button onclick="addToCart('MSI B450', 140)">Add to Cart</button>
-            </div>
-            <div class="product__card">
-                <img src="images/asus-b550.jpg" alt="ASUS B550">
-                <h4>ASUS B550</h4>
-                <p>$180</p>
-                <button onclick="addToCart('ASUS B550', 180)">Add to Cart</button>
-            </div>
-            <div class="product__card">
-                <img src="images/msi-b450.jpg" alt="MSI B450">
-                <h4>MSI B450</h4>
-                <p>$140</p>
-                <button onclick="addToCart('MSI B450', 140)">Add to Cart</button>
-            </div>
-        </div>
-
-        <!-- Memory (RAM) -->
-        <h3>Memory (RAM)</h3>
-        <div class="product__grid">
-            <div class="product__card">
-                <img src="images/corsair-16gb.jpg" alt="Corsair 16GB">
-                <h4>Corsair 16GB</h4>
-                <p>$80</p>
-                <button onclick="addToCart('Corsair 16GB', 80)">Add to Cart</button>
-            </div>
-            <div class="product__card">
-                <img src="images/gskill-16gb.jpg" alt="G.Skill 16GB">
-                <h4>G.Skill 16GB</h4>
-                <p>$75</p>
-                <button onclick="addToCart('G.Skill 16GB', 75)">Add to Cart</button>
-            </div>
-            <div class="product__card">
-                <img src="images/corsair-16gb.jpg" alt="Corsair 16GB">
-                <h4>Corsair 16GB</h4>
-                <p>$80</p>
-                <button onclick="addToCart('Corsair 16GB', 80)">Add to Cart</button>
-            </div>
-            <div class="product__card">
-                <img src="images/gskill-16gb.jpg" alt="G.Skill 16GB">
-                <h4>G.Skill 16GB</h4>
-                <p>$75</p>
-                <button onclick="addToCart('G.Skill 16GB', 75)">Add to Cart</button>
-            </div>
-            <div class="product__card">
-                <img src="images/corsair-16gb.jpg" alt="Corsair 16GB">
-                <h4>Corsair 16GB</h4>
-                <p>$80</p>
-                <button onclick="addToCart('Corsair 16GB', 80)">Add to Cart</button>
-            </div>
-            <div class="product__card">
-                <img src="images/gskill-16gb.jpg" alt="G.Skill 16GB">
-                <h4>G.Skill 16GB</h4>
-                <p>$75</p>
-                <button onclick="addToCart('G.Skill 16GB', 75)">Add to Cart</button>
-            </div>
-        </div>
-
-        <!-- Storage Devices -->
-        <h3>Storage Devices</h3>
-        <div class="product__grid">
-            <div class="product__card">
-                <img src="images/samsung-1tb.jpg" alt="Samsung 1TB SSD">
-                <h4>Samsung 1TB SSD</h4>
-                <p>$120</p>
-                <button onclick="addToCart('Samsung 1TB SSD', 120)">Add to Cart</button>
-            </div>
-            <div class="product__card">
-                <img src="images/wd-2tb-hdd.jpg" alt="WD 2TB HDD">
-                <h4>WD 2TB HDD</h4>
-                <p>$70</p>
-                <button onclick="addToCart('WD 2TB HDD', 70)">Add to Cart</button>
-            </div>
-            <div class="product__card">
-                <img src="images/samsung-1tb.jpg" alt="Samsung 1TB SSD">
-                <h4>Samsung 1TB SSD</h4>
-                <p>$120</p>
-                <button onclick="addToCart('Samsung 1TB SSD', 120)">Add to Cart</button>
-            </div>
-            <div class="product__card">
-                <img src="images/wd-2tb-hdd.jpg" alt="WD 2TB HDD">
-                <h4>WD 2TB HDD</h4>
-                <p>$70</p>
-                <button onclick="addToCart('WD 2TB HDD', 70)">Add to Cart</button>
-            </div>
-            <div class="product__card">
-                <img src="images/samsung-1tb.jpg" alt="Samsung 1TB SSD">
-                <h4>Samsung 1TB SSD</h4>
-                <p>$120</p>
-                <button onclick="addToCart('Samsung 1TB SSD', 120)">Add to Cart</button>
-            </div>
-            <div class="product__card">
-                <img src="images/wd-2tb-hdd.jpg" alt="WD 2TB HDD">
-                <h4>WD 2TB HDD</h4>
-                <p>$70</p>
-                <button onclick="addToCart('WD 2TB HDD', 70)">Add to Cart</button>
-            </div>
-        </div>
-
-        <button onclick="showSummary()">Next</button>
+       
+        <section class="featured__products">
+            <h2>Processors</h2>
+            <div class="product__grid" id="processorsGrid"></div>
+        </section>
+    
+        <section class="featured__products">
+            <h2>Graphics Cards</h2>
+            <div class="product__grid" id="graphicsCardsGrid"></div>
+        </section>
+    
+        <section class="featured__products">
+            <h2>Motherboards</h2>
+            <div class="product__grid" id="motherboardsGrid"></div>
+        </section>
+    
+        <section class="featured__products">
+            <h2>Memory (RAM)</h2>
+            <div class="product__grid" id="ramGrid"></div>
+        </section>
+    
+        <section class="featured__products">
+            <h2>Storage Devices</h2>
+            <div class="product__grid" id="storageGrid"></div>
+        </section>
+            <script src="./pJs.js"></script>
     </div>
-
-    <div id="orderSummary" style="display:none;">
-        <h2>Order Summary</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Item</th>
-                    <th>Price</th>
-                </tr>
-            </thead>
-            <tbody id="cartItems"></tbody>
-        </table>
-        <p>Total: $<span id="totalPrice">0</span></p>
-        <button onclick="showPayment()">Proceed to Payment</button>
-    </div>
-
-    <div id="paymentDetails" style="display:none;">
-        <h2>Enter Your Details & Payment</h2>
-        <label>Name:</label>
-        <input type="text" id="name"><br>
-        <label>Address:</label>
-        <input type="text" id="address"><br>
-        <label>Card Number:</label>
-        <input type="text" id="cardNumber"><br>
-        <button onclick="submitOrder()">Pay</button>
-    </div>
-
-    <script src="./pJs.js"></script>
-
     <footer>
         <!--Footer of the website-->
         <div class="Footer__Content">
