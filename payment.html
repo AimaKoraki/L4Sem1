@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Parts</title>
+    <link rel="stylesheet" href="./Styles/style.css">
+    <link rel="stylesheet" href="./Styles/responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./manifestandIcons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./manifestandIcons/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./manifestandIcons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="GameSphere" />
+    <link rel="manifest" href="./manifestandIcons/site.webmanifest" />
+</head>
+<body>
+    <header class="header">
+        <script src="script.js" defer></script>
+        <div class="leftside">
+            <div class="logo"><a href="./index.html"><img src="./images/Logo.png"  alt="Website's Logo"></a> </div>  
+        </div>
+        <div class="rightside">
+            <nav class="header__nav">
+                <div class="header__ul" id="header__J">
+                    <a href="./index.html">Home</a>
+                    <a href="./aboutUs.html">About Us</a>
+                    <a href="./upcomigGames.html">Upcoming Games</a>
+                    <div class="dropdown">
+                        <button class="dropbtn">Consoles and Accessories 
+                          <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="./consoles.html">Consoles</a>
+                            <a href="./gamingPeripherals.html">Gaming Peripherals</a>
+                            <a href="./products.html">Computer Parts</a>
+                        </div>
+                    </div>                         
+                    <a href="./games.html">Games</a>
+                    <a href="./queriesandFAQs.html">Queries and FAQs</a>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars"></i>
+                      </a>
+                </div>
+            </nav>
+        </div>       
+    </header>
+   <section class="Payment__box">
+    <h2>Payment Details</h2>
+        <form>
+            <div class="input__group">
+                <h4>Personal details</h4>
+                <div class="input__box">
+                    <label>First Name: </label>
+                    <input type="text" placeholder="First Name" required class="Name">
+                    <i class="fa fa-user icon"></i>
+                </div>
+                <div class="input__box">
+                    <label>Last Name: </label>
+                    <input type="text" placeholder="First Name" required class="Name">
+                    <i class="fa fa-user icon"></i>
+                </div>
+                <div class="input__box">
+                    <label>Email Address: </label>
+                    <input type="email" placeholder="Email" required class="Name">
+                    <i class="fa fa-envelope"></i> 
+                </div>
+            </div>
+            <div class="input__group">
+                <h4>Payment details</h4>
+                <div class="input__box">
+                    <input type="radio" name="pay" id="bc1" checked class="radio">
+                    <label for="bc1"><span><i class="fa fa-cc-visa"></i></span></label>
+                    <input type="radio" name="pay" id="bc2" checked class="radio">
+                    <label for="bc2"><span><i class="fa fa-cc-paypal"></i></span></label>
+                </div>
+            </div>
+            <div class="input__group">
+                <div class="input__box">
+                    <input type="tel" placeholder="Card Number" required class="Name">
+                    <i class="fa-solid fa-credit-card"></i>
+                </div>
+            </div>
+            <div class="input__group">
+                <div class="input__box">
+                    <input type="tel" placeholder="Card CVC" required class="Name">
+                    <i class="fa-solid fa-credit-card"></i>
+                </div>
+            </div>
+            <button onclick="submitOrder()">Pay</button>
+        </form>    
+   </section> 
+    
+    <footer>
+        <!--Footer of the website-->
+        <div class="Footer__Content">
+            <div class="Footer__Section">
+                <h3>Contact Us</h3>
+                <p>Email: info@gameBox.com</p>
+                <p>Phone: (555) 123-4567</p>
+                <p>1A Centre Road, Colombo 00200</p>
+            </div>
+            <div class="Footer__Section">
+                <h3>Follow Us</h3>
+                <div class="Social__Links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="Footer__Section">
+                <h3>Quick Links</h3>
+                <div class="Quick__links">
+                    <a href="./index.html">Home</a>
+                    <a href="./aboutUs.html">About Us</a>
+                    <a href="./upcomigGames.html">Upcoming Games</a>         
+                    <a href="./consoles.html">Consoles</a>
+                    <a href="./gamingPeripherals.html">Gaming Peripherals</a>
+                    <a href="./games.html">Games</a>
+                    <a href="./queriesandFAQs.html">Queries and FAQs</a>
+                </div>
+            </div>
+            <div class="Footer__Section">
+                <h3>Newsletter</h3>
+                <form class="Newsletter__Form">
+                    <input type="email" placeholder="Enter your email">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="Footer__Bottom">
+            <p>&copy; 2024 GameBox. All rights reserved.</p>
+        </div>
+        </footer>
+        </body>
+        </html>
+        <!--|| Source for the images of games: https://www.epicgames.com/site/en-US/home, https://www.allposters.com/-st/Video-Games-Posters_c50320_.html-->
