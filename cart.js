@@ -36,5 +36,27 @@ function clearCart() {
 
 function updateCartCount() {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
-    document.getElementById("cartCount").innerText = cart.length;
+    let cartCountElem = document.getElementById("cartCount");
+    if (cartCountElem) {
+        cartCountElem.innerText = cart.length;
+    }
 }
+
+
+document.getElementById("saveFavourite").addEventListener("click", function() {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    localStorage.setItem("favouriteOrder", JSON.stringify(cart));
+    alert("Order saved as favourite!");
+});
+
+
+document.getElementById("applyFavourite").addEventListener("click", function() {
+    let favOrder = localStorage.getItem("favouriteOrder");
+    if (favOrder) {
+        let cart = JSON.parse(favOrder);
+        localStorage.setItem("cart", JSON.stringify(cart));
+        loadCart(); // Instead of updateCartTable()
+    } else {
+        alert("No favourite order found.");
+    }
+});
