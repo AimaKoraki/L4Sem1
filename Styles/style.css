@@ -1355,3 +1355,93 @@ a:active{
     background-color: var(--BUTTON-HOVER);
     color: white;
   }
+
+  /*------------------------------------||Cart page-------------------------------------------------------*/
+
+  .table table{
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: #010f1a;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+.CB__Btutton{
+    background-color: var(--BUTTON-COLOR);
+    color: var(--BUTTON-COLOR-TEXT);
+    padding: 0.3rem 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: auto;    
+}
+
+.table table th, table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.table table th {
+    color: white;
+}
+
+#saveFavourite, #applyFavourite {
+    background-color: #28a745;
+}
+
+#saveFavourite:hover, #applyFavourite:hover {
+    background-color: #218838;
+}
+
+@media (max-width: 600px) {
+    .table table {
+        font-size: 14px;
+    }
+    .table button {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+
+/*------------------------------------||Payment page-------------------------------------------------------*/
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+}
+.Payment__box {
+    width: 100%;
+    max-width: 600px; /* Adjust as needed */
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #010f1a;
+}
+
+.input__group {
+    margin-bottom: 15px;
+}
+.input__box {
+    margin-bottom: 10px;
+}
+.input__box label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.input__box input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+

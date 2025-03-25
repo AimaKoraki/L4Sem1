@@ -39,6 +39,18 @@
     </header>
 
     <h2>Your Cart</h2>
+    <div class="table">
+        <table>
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Price</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="cartItems"></tbody>
+        </table>    
+    </div>
     <table>
         <thead>
             <tr>
@@ -49,10 +61,11 @@
         <tbody id="cartItems"></tbody>
     </table>
     <p>Total: $<span id="totalPrice">0</span></p>
-    <button onclick="clearCart()">Clear Cart</button>
-    <button onclick="checkout()">Proceed to Payment</button>
-    <button onclick="saveFavorite()" id="saveFavourite">Save as Favorite</button>
-<button onclick="applyFavorite()" id="applyFavourite">Apply Favorite</button>
+    <button onclick="clearCart()" class="CB__Btutton">Clear Cart</button>
+    <button onclick="checkout()" class="CB__Btutton">Proceed to Payment</button>
+    <button onclick="saveFavorite()" id="saveFavourite" class="CB__Btutton">Save as Favorite</button>
+    <button onclick="applyFavorite()" id="applyFavourite" class="CB__Btutton">Apply Favorite</button>
+    <a href="payment.html"><button class="CB__Btutton">Proceed to Payment</button></a>
 
 
     <script src="./cart.js"></script>
