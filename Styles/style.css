@@ -1364,12 +1364,15 @@ a:active{
     justify-content: end;
     margin-right: 1rem;
 }
-
+.cart__IconFixed{
+    position: fixed;
+}
 .cart__icon {
     position: relative;
     text-decoration: none;
     color: black;
     font-size: 30px;
+    
 }
 
 #cart__count {
