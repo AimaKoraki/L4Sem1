@@ -51,6 +51,8 @@ function loadProducts() {
     }
 }
 
+
+
 function addToCart(itemName, itemPrice, itemImage) {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
     cart.push({ name: itemName, price: itemPrice, image: itemImage });
