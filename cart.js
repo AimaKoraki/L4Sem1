@@ -12,7 +12,7 @@ function loadCart() {
             <td><img src="${item.image}" class="cart__img"></td>
             <td>${item.name}</td>
             <td>${item.price} LKR</td>
-            <td><button onclick="removeFromCart(${index})">Remove</button></td>
+            <td><button onclick="removeFromCart(${index})" class="CB__Btutton">Remove</button></td>
         </tr>`;
         cartTable.innerHTML += row;
         totalPrice += item.price;
