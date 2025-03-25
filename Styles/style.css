@@ -1374,7 +1374,10 @@ a:active{
     font-size: 30px;
     
 }
-
+.cart__img{
+    height: 200px;
+    width: auto;
+}
 #cart__count {
     position: absolute;
     top: -10px;

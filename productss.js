@@ -59,7 +59,7 @@ function loadProducts() {
                         <div class="price__box">
                             <span class="price">${product.price} LKR</span>
                         </div>            
-                        <button class="shop__button" onclick="addToCart('${product.name}', ${product.price})">Add to Cart</button>
+                        <button class="shop__button" onclick="addToCart('${product.name}', ${product.price}, '${product.image}')">Add to Cart</button>
                     </div>
                 </div>
             `;
@@ -69,9 +69,9 @@ function loadProducts() {
     }
 }
 
-function addToCart(itemName, itemPrice) {
+function addToCart(itemName, itemPrice, itemImage) {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
-    cart.push({ name: itemName, price: itemPrice });
+    cart.push({ name: itemName, price: itemPrice, image: itemImage });
     localStorage.setItem("cart", JSON.stringify(cart));
     updateCartCount();
     alert(`${itemName} added to cart!`);
