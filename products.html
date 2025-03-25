@@ -51,14 +51,15 @@
             </nav>
         </div>       
     </header>
-    <a href="./cart.html">
-        <div class="cart-counter">
-            🛒 Cart: <span id="cartCount">0</span> items
-        </div>
-        <button>View Cart</button>
-    </a>
+    <div class="cart__container">
+        <a href="cart.html" class="cart__icon"><i class="fa-solid fa-cart-shopping"></i> <span id="cart__count">0</span>
+        </a>
+    </div>
     <div id="productSelection">
-        <h2>Select Your Computer Parts</h2>
+        <div class="page__header">
+            <h2>Select Your Computer Parts</h2>
+        </div>
+        
        
         <section class="featured__products">
             <h2>Processors</h2>
@@ -84,7 +85,7 @@
             <h2>Storage Devices</h2>
             <div class="product__grid" id="storageGrid"></div>
         </section>
-            <script src="./pJs.js"></script>
+            <script src="./productss.js"></script>
     </div>
     <footer>
         <!--Footer of the website-->

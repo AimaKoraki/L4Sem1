@@ -79,6 +79,6 @@ function addToCart(itemName, itemPrice) {
 
 function updateCartCount() {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
-    document.getElementById("cartCount").innerText = cart.length;
+    document.getElementById("cart__count").innerText = cart.length;
 }
 

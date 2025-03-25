@@ -10,7 +10,7 @@ function loadCart() {
     cart.forEach((item, index) => {
         let row = `<tr>
             <td>${item.name}</td>
-            <td>$${item.price}</td>
+            <td>${item.price} LKR</td>
             <td><button onclick="removeFromCart(${index})">Remove</button></td>
         </tr>`;
         cartTable.innerHTML += row;
