@@ -1,5 +1,5 @@
 {
-    "products": [
+    "consoles": [
         {
             "category": "Featured Products",
             "items": [
@@ -33,46 +33,59 @@
             ]
         }
     ],
-    "consoles": [
+    "computerParts": [
         {
             "category": "processors",
             "items": [
-                { "name": "PlayStation 5", "image": "./images/PS5.webp", "price": 499.99 },
-                { "name": "PlayStation 4", "image": "./images/consoles/pS4.webp", "price": 499.99 },
-                { "name": "PlayStation 3", "image": "./images/consoles/ps3_60gb_pak__37675.webp", "price": 299.99 }
-            ]
+                { "name": "Intel i5 Processor", "image": "./images/products/intel-i5.webp", "price": 200 },
+                { "name": "Intel i7 Processor", "image": "./images/products/intel-i7.webp", "price": 300 },
+                { "name": "Intel i9 Processor", "image": "./images/products/intel-i9.webp", "price": 250 },
+                { "name": "AMD Ryzen 5", "image": "./images/products/rysen-5.webp", "price": 300 },
+                { "name": "AMD Ryzen 7", "image": "./images/products/rysen-7.webp", "price": 250 },
+                { "name": "AMD Ryzen 9", "image": "./images/products/rysen-9.webp", "price": 350 }
+                    ]
         },
         {
             "category": "graphicsCards",
             "items": [
-                { "name": "PlayStation 5", "image": "./images/PS5.webp", "price": 499.99 },
-                { "name": "PlayStation 4", "image": "./images/consoles/pS4.webp", "price": 499.99 },
-                { "name": "PlayStation 3", "image": "./images/consoles/ps3_60gb_pak__37675.webp", "price": 299.99 }
+                { "name": "ZOTAC GAMING RTX 3050 ECO 8GB", "image": "./images/products/RTX3050.webp", "price": 80000 },
+                { "name": "ASUS TUF Gaming RTX 5080 16GB GDDR7", "image": "./images/products/RTX3050.webp", "price": 699000 },
+                { "name": "ZOTAC GAMING RTX 4060 8GB Twin Edge OC BLACK / WHITE", "image": "./images/products/RTX4060.webp", "price": 119000 },
+                { "name": "ASUS Dual Radeon RX 7600 V2 8GB GDDR6", "image": "./images/products/radRX7600.webp", "price": 129000 },
+                { "name": "ASUS ROG RTX 5090 Astral 32GB GDDR7", "image": "./images/products/RTX5090.webp", "price": 1499000 },
+                { "name": "MSI RTX 4080 SUPER GAMING SLIM 16GB", "image": "./images/products/RTX4080.webp", "price": 529000 }
             ]
         },
         {
             "category": "motherboards",
             "items": [
-                { "name": "PlayStation 5", "image": "./images/PS5.webp", "price": 499.99 },
-                { "name": "PlayStation 4", "image": "./images/consoles/pS4.webp", "price": 499.99 },
-                { "name": "PlayStation 3", "image": "./images/consoles/ps3_60gb_pak__37675.webp", "price": 299.99 }
+                { "name": "ASUS PRIME A620M-K", "image": "./images/products/ASUSPRIMEA620MK.webp", "price": 80000 },
+                { "name": "ASUS PRIME B450M-A II", "image": "./images/products/ASUSPRIMEB450.webp", "price": 699000 },
+                { "name": "ASUS PRIME H610M-K DDR5", "image": "./images/products/ASUSPRIMEH61M.webp", "price": 119000 },
+                { "name": "ASUS ProArt Z890-CREATOR WIFI", "image": "./images/products/ASUSProArtZ890.webp", "price": 129000 },
+                { "name": "MSI B450 GAMING PLUS MAX", "image": "./images/products/MSIB450GAMINGPLUS MAX.webp", "price": 1499000 },
+                { "name": "MSI B650M PROJECT ZERO WIFI D5", "image": "./images/products/MSIB650MPROJEZEROWIFD5.webp", "price": 529000 }
             ]
         },
         {
             "category": "ram",
             "items": [
-                { "name": "PlayStation 5", "image": "./images/PS5.webp", "price": 499.99 },
-                { "name": "PlayStation 4", "image": "./images/consoles/pS4.webp", "price": 499.99 },
-                { "name": "PlayStation 3", "image": "./images/consoles/ps3_60gb_pak__37675.webp", "price": 299.99 }
+                { "name": "G.SKILL TridentZ5 RGB 32GB (2 x 16GB) DDR5 5600Mhz Silver - Intel", "image": "./images/products/GSKILLTridentZ5.webp", "price": 32000 },
+                { "name": "TEAM T-CREATE EXPERT (64GB-96GB) KIT 6400Mhz", "image": "./images/products/TEAMT-CREATE-EXPERT.webp", "price": 45000 },
+                { "name": "TEAM TFORCE DELTA RGB 6000MHZ - INTEL (32GB-64GB) KIT", "image": "./images/products/TEAMTFORCE-DELTA.webp", "price": 28000 },
+                { "name": "Team TFORCE VULCAN Z 3200MHZ (8GB-16GB) - SINGLE", "image": "./images/products/TeamTFORCEVULCAN.webp", "price": 18000 }
+
             ]
         },
         {
             "category": "storage",
             "items": [
-                { "name": "PlayStation 5", "image": "./images/PS5.webp", "price": 499.99 },
-                { "name": "PlayStation 4", "image": "./images/consoles/pS4.webp", "price": 499.99 },
-                { "name": "PlayStation 3", "image": "./images/consoles/ps3_60gb_pak__37675.webp", "price": 299.99 }
-            ]
+                { "name": "Corsair MP700 PRO 1TB PCIe Gen5 x4 NVMe 2.0 M.2 SSD", "image": "./images/products/CorsairMP700.webp", "price": 80000 },
+                { "name": "KINGSTON NV3 NVMe PCIe Gen 4.0 1TB", "image": "./images/products/KINGSTONNV3.webp", "price": 699000 },
+                { "name": "SAMSUNG 870 EVO 500GB - 2TB", "image": "./images/products/SAMSUNG870.webp", "price": 119000 },
+                { "name": "Team T-FORCE GE PRO 2TB Gen 5.0x4 with NVMe 2.0 3D NAND with AirFlow I", "image": "./images/products/TeamTFORCEGEPRO.webp", "price": 129000 },
+                { "name": "Team TFORCE VULCAN Z 3200MHZ (8GB-16GB) - SINGLE", "image": "./images/products/TeamTFORCEVULCANZLE.webp", "price": 1499000 },
+                { "name": "TEAM TFORCE VULCAN Z SATA SSD 256GB - 1TB", "image": "./images/products/TEAMTFORCEVULCANZ.webp", "price": 529000 }            ]
         }
     ]
 }
