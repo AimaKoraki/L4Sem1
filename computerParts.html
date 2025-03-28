@@ -20,7 +20,7 @@
     <meta name="apple-mobile-web-app-title" content="GameSphere" />
     <link rel="manifest" href="./manifestandIcons/site.webmanifest" />
 </head>
-<body>
+<body data-page="computerParts"> 
     <header class="header">
         <script src="script.js" defer></script>
         <div class="leftside">
@@ -39,7 +39,7 @@
                         <div class="dropdown-content">
                             <a href="./consoles.html">Consoles</a>
                             <a href="./gamingPeripherals.html">Gaming Peripherals</a>
-                            <a href="./products.html">Computer Parts</a>
+                            <a href="./computerParts.html">Computer Parts</a>
                         </div>
                     </div>                         
                     <a href="./games.html">Games</a>
@@ -61,33 +61,35 @@
             <h2>Select Your Computer Parts</h2>
         </div>
         
-       
-        <section class="featured__products">
-            <h2>Processors</h2>
-            <div class="product__grid" id="processorsGrid"></div>
-        </section>
+        <div class="products-container" id="products-container">
+            <section class="featured__products">
+                <h2>Processors</h2>
+                <div class="product__grid" id="processorsGrid"></div>
+            </section>
+        
+            <section class="featured__products">
+                <h2>Graphics Cards</h2>
+                <div class="product__grid" id="graphicsCardsGrid"></div>
+            </section>
+        
+            <section class="featured__products">
+                <h2>Motherboards</h2>
+                <div class="product__grid" id="motherboardsGrid"></div>
+            </section>
+        
+            <section class="featured__products">
+                <h2>Memory (RAM)</h2>
+                <div class="product__grid" id="ramGrid"></div>
+            </section>
+        
+            <section class="featured__products">
+                <h2>Storage Devices</h2>
+                <div class="product__grid" id="storageGrid"></div>
+            </section>
+                <script src="./console.js"></script>
+        </div>
     
-        <section class="featured__products">
-            <h2>Graphics Cards</h2>
-            <div class="product__grid" id="graphicsCardsGrid"></div>
-        </section>
-    
-        <section class="featured__products">
-            <h2>Motherboards</h2>
-            <div class="product__grid" id="motherboardsGrid"></div>
-        </section>
-    
-        <section class="featured__products">
-            <h2>Memory (RAM)</h2>
-            <div class="product__grid" id="ramGrid"></div>
-        </section>
-    
-        <section class="featured__products">
-            <h2>Storage Devices</h2>
-            <div class="product__grid" id="storageGrid"></div>
-        </section>
-            <script src="./productss.js"></script>
-    </div>
+        </div> 
     <footer>
         <!--Footer of the website-->
         <div class="Footer__Content">

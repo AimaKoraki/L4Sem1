@@ -20,7 +20,7 @@
     <meta name="apple-mobile-web-app-title" content="GameSphere" />
     <link rel="manifest" href="./manifestandIcons/site.webmanifest" />
 </head>
-<body>
+<body data-page="consoles">
     <header class="header">
         <script src="script.js" defer></script>
         <div class="leftside">
@@ -39,7 +39,7 @@
                         <div class="dropdown-content">
                             <a href="./consoles.html">Consoles</a>
                             <a href="./gamingPeripherals.html">Gaming Peripherals</a>
-                            <a href="./products.html">Computer Parts</a>
+                            <a href="./computerParts.html">Computer Parts</a>
                         </div>
                     </div>                         
                     <a href="./games.html">Games</a>
@@ -68,29 +68,31 @@
             delivers exceptional performance with 4K resolution, smooth framerates, and advanced ray tracing for breathtaking visuals. For versatility and fun on the go, the Nintendo Switch provides seamless transitions between handheld, TV, and tabletop modes, making it ideal for gamers of all ages. Whether at home or on the move, find your perfect gaming companion here.</p>
         </div>
     </div>
-    
-        <div id="productSelection">      
-            <section class="featured__products">
-                <h2>Featured Products</h2>
-                <div class="product__grid" id="featuredGrid"></div>
-            </section>
-        
-            <section class="featured__products">
-                <h2>Xbox</h2>
-                <div class="product__grid" id="XboxGrid"></div>
-            </section>
-        
-            <section class="featured__products">
-                <h2>Nintendo Switch</h2>
-                <div class="product__grid" id="NintendoGrid"></div>
-            </section>
-        
-            <section class="featured__products">
-                <h2>PlayStation</h2>
-                <div class="product__grid" id="PlayStationGrid"></div>
-            </section>
-                <script src="./console.js"></script>
+        <div class="products-container" id="products-container">
+            <div id="productSelection">      
+                <section class="featured__products">
+                    <h2>Featured Products</h2>
+                    <div class="product__grid" id="featuredGrid"></div>
+                </section>
+            
+                <section class="featured__products">
+                    <h2>Xbox</h2>
+                    <div class="product__grid" id="XboxGrid"></div>
+                </section>
+            
+                <section class="featured__products">
+                    <h2>Nintendo Switch</h2>
+                    <div class="product__grid" id="NintendoGrid"></div>
+                </section>
+            
+                <section class="featured__products">
+                    <h2>PlayStation</h2>
+                    <div class="product__grid" id="PlayStationGrid"></div>
+                </section>
+                    
+            </div>
         </div>
+        
     </main>
 <footer>
 <!--Footer of the website-->
@@ -133,6 +135,7 @@
     <p>&copy; 2024 GameBox. All rights reserved.</p>
 </div>
 </footer>
+<script src="./console.js"></script>
 </body>
 </html>
 <!--||Xbox Consoles images source: https://www.xbox.com/en-US/consoles/all-consoles?msockid=1bbc0937663d6e5434e51c1767aa6f86 -->

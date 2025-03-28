@@ -1,0 +1,78 @@
+{
+    "products": [
+        {
+            "category": "Featured Products",
+            "items": [
+                { "name": "PlayStation 5", "image": "./images/PS5.webp", "price": 499.99 },
+                { "name": "Xbox Series X", "image": "./images/Xbox.webp", "price": 499.99 },
+                { "name": "Nintendo Switch", "image": "./images/Nintendo.webp", "price": 299.99 }
+            ]
+        },
+        {
+            "category": "Xbox",
+            "items": [
+                { "name": "Xbox Series S - 1TB (White)", "image": "./images/consoles/XboxSeriesS-1TB(White).webp", "price": 299.99 },
+                { "name": "Xbox Series X - 1TB Digital Edition", "image": "./images/consoles/XboxSeriesX-1TBGalaxyBSE.webp", "price": 299.99 },
+                { "name": "Xbox Series X - 2TB Special Edition", "image": "./images/consoles/XboxSeriesX_2TB_GBEdition.webp", "price": 299.99 }
+            ]
+        },
+        {
+            "category": "Nintendo",
+            "items": [
+                { "name": "Nintendo Switch OLED", "image": "./images/consoles/Switch-OLED.webp", "price": 299.99 },
+                { "name": "Nintendo Switch Lite", "image": "./images/consoles/Nintendo-Switch-lite-3.webp", "price": 299.99 },
+                { "name": "Nintendo Switch", "image": "./images/Nintendo.webp", "price": 299.99 }
+            ]
+        },
+        {
+            "category": "PlayStation",
+            "items": [
+                { "name": "PlayStation 5", "image": "./images/PS5.webp", "price": 499.99 },
+                { "name": "PlayStation 4", "image": "./images/consoles/pS4.webp", "price": 499.99 },
+                { "name": "PlayStation 3", "image": "./images/consoles/ps3_60gb_pak__37675.webp", "price": 299.99 }
+            ]
+        }
+    ],
+    "consoles": [
+        {
+            "category": "processors",
+            "items": [
+                { "name": "PlayStation 5", "image": "./images/PS5.webp", "price": 499.99 },
+                { "name": "PlayStation 4", "image": "./images/consoles/pS4.webp", "price": 499.99 },
+                { "name": "PlayStation 3", "image": "./images/consoles/ps3_60gb_pak__37675.webp", "price": 299.99 }
+            ]
+        },
+        {
+            "category": "graphicsCards",
+            "items": [
+                { "name": "PlayStation 5", "image": "./images/PS5.webp", "price": 499.99 },
+                { "name": "PlayStation 4", "image": "./images/consoles/pS4.webp", "price": 499.99 },
+                { "name": "PlayStation 3", "image": "./images/consoles/ps3_60gb_pak__37675.webp", "price": 299.99 }
+            ]
+        },
+        {
+            "category": "motherboards",
+            "items": [
+                { "name": "PlayStation 5", "image": "./images/PS5.webp", "price": 499.99 },
+                { "name": "PlayStation 4", "image": "./images/consoles/pS4.webp", "price": 499.99 },
+                { "name": "PlayStation 3", "image": "./images/consoles/ps3_60gb_pak__37675.webp", "price": 299.99 }
+            ]
+        },
+        {
+            "category": "ram",
+            "items": [
+                { "name": "PlayStation 5", "image": "./images/PS5.webp", "price": 499.99 },
+                { "name": "PlayStation 4", "image": "./images/consoles/pS4.webp", "price": 499.99 },
+                { "name": "PlayStation 3", "image": "./images/consoles/ps3_60gb_pak__37675.webp", "price": 299.99 }
+            ]
+        },
+        {
+            "category": "storage",
+            "items": [
+                { "name": "PlayStation 5", "image": "./images/PS5.webp", "price": 499.99 },
+                { "name": "PlayStation 4", "image": "./images/consoles/pS4.webp", "price": 499.99 },
+                { "name": "PlayStation 3", "image": "./images/consoles/ps3_60gb_pak__37675.webp", "price": 299.99 }
+            ]
+        }
+    ]
+}

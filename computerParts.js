@@ -1,4 +1,4 @@
-const products = {
+/* const products = {
     processors: [
         { name: "Intel i5 Processor", image: "./images/products/intel-i5.webp", price: 200 },
         { name: "Intel i7 Processor", image: "./images/products/intel-i7.webp", price: 300 },
@@ -36,38 +36,54 @@ const products = {
         { name: "Samsung 1TB SSD", image: "images/samsung-ssd.jpg", price: 120 },
         { name: "Seagate 2TB HDD", image: "images/seagate-hdd.jpg", price: 90 }
     ]
-};
+}; */
+fetch('"./products/products.json"')
+  .then(response => response.json()) // Parse JSON data
+  .then(data => {
+    displayProducts(data.products); // Pass data to function
+  })
+  .catch(error => console.error('Error loading JSON:', error));
 document.addEventListener("DOMContentLoaded", function () {
-    loadProducts();
-    updateCartCount(); // Update cart count when the page loads
+    displayProducts();
+    updateCartCount(); 
 });
-function loadProducts() {
-    for (const category in products) {
-        const sectionId = `${category}Grid`;  // Matches the ID in index.html
-        const productGrid = document.getElementById(sectionId);
 
-        products[category].forEach(product => {
-            const productCard = document.createElement("div");
-            productCard.classList.add("product__card");
+function displayProducts(categories) {
+    const container = document.getElementById('products-container'); // Ensure this exists in your HTML
+    
+    categories.forEach(category => {
+      const section = document.createElement('section');
+      section.classList.add('product-section');
+      
+      section.innerHTML = `<h2>${category.category}</h2>
+                           <div class="product__grid"></div>`;
+      
+      const grid = section.querySelector('.product__grid');
+      
+      category.items.forEach(product => {
+        const productCard = document.createElement('div');
+        productCard.classList.add('product__card');
+        
+        productCard.innerHTML = `
+          <img src="${product.image}" alt="${product.name}">
+          <h3>${product.name}</h3>
+          <p>Experience next-gen gaming</p>
+          <div class="shop__buttons">
+              <div class="shop__buttons__Container">
+                  <div class="price__box">
+                      <span class="price">$${product.price.toFixed(2)}</span>
+                  </div>            
+                  <button class="shop__button" onclick="addToCart('${product.name}', ${product.price})">Add to Cart</button>
+              </div>
+          </div>`;
+  
+        grid.appendChild(productCard);
+      });
+  
+      container.appendChild(section);
+    });
+  }
 
-            productCard.innerHTML = `
-                <img src="${product.image}" alt="${product.name}">
-                <h3>${product.name}</h3>
-                <p>High performance for gaming & work</p>
-                <div class="shop__buttons">
-                    <div class="shop__buttons__Container">
-                        <div class="price__box">
-                            <span class="price">${product.price} LKR</span>
-                        </div>            
-                        <button class="shop__button" onclick="addToCart('${product.name}', ${product.price}, '${product.image}')">Add to Cart</button>
-                    </div>
-                </div>
-            `;
-
-            productGrid.appendChild(productCard);
-        });
-    }
-}
 
 function addToCart(itemName, itemPrice, itemImage) {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
