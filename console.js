@@ -65,17 +65,25 @@ function displayProducts(categories) {
 
 function addToCart(itemName, itemPrice, itemImage) {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
-    cart.push({ name: itemName, price: itemPrice, image: itemImage });
+
+    // Check if item already exists in the cart
+    let existingItem = cart.find(item => item.name === itemName);
+
+    if (existingItem) {
+        existingItem.quantity += 1; // Increase the quantity
+    } else {
+        cart.push({ name: itemName, price: itemPrice, image: itemImage, quantity: 1 });
+    }
+
     localStorage.setItem("cart", JSON.stringify(cart));
     updateCartCount();
     alert(`${itemName} added to cart!`);
 }
 
+
 function updateCartCount() {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
-    let cartCountElement = document.getElementById("cart__count");
-
-    if (cartCountElement) {
-        cartCountElement.innerText = cart.length;
-    }
+    let totalItems = cart.reduce((sum, item) => sum + item.quantity, 0); // Sum up item quantities
+    document.getElementById("cart__count").innerText = totalItems;
 }
+
