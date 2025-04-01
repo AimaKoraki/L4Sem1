@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 console.error("Page not recognized!");
             }
         })
-        .catch(error => console.error("Error loading JSON:", error));
+        .catch(error => console.error("Error loading JSON file", error));
 });
 
 function displayProducts(categories) {
