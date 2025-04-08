@@ -54,7 +54,13 @@
     </header>
     <div class="container">
         <section class="Payment__box">
-            <h2>Payment Details</h2>
+            <div class="Content__Wrapper">
+                <div class="leftside">
+                    <img src="./my-favicon/favicon-96x96.png" alt="Payment Icon" class="payment__icon">
+                </div>
+                <div class="rightside"></div>
+                <h2>Payment Details</h2>
+            </div>
             <form>
                 <div class="input__group">
                     <h4>Personal Details</h4>
@@ -88,6 +94,18 @@
                 </div>
                 <div class="input__group">
                     <h4>Payment Details</h4>
+                    <div class="payment__method">
+                        <label>
+                            <input type="radio" name="paymentMethod" value="MasterCard" required>
+                            <i class="fa-brands fa-cc-visa"></i>
+                            Visa
+                        </label>
+                        <label>
+                            <input type="radio" name="paymentMethod" value="Visa" required>
+                            <i class="fa-brands fa-cc-mastercard"></i>
+                            MasterCard
+                        </label>
+                    </div>
                     <div class="input__box">
                         <label>Name on Card:</label>
                         <input type="text" placeholder="Cardholder Name" required>
@@ -109,6 +127,7 @@
             </form>
         </section>
     </div> 
+    <script src="./scripts/pay.js"></script>
     <footer>
         <!--Footer of the website-->
         <div class="Footer__Content">

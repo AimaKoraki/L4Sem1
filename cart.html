@@ -67,15 +67,23 @@
             <tbody id="cartItems"></tbody>
         </table>    
     </div>
-    <p>Total: <span id="totalPrice">0</span> LKR</p>
-    <button onclick="clearCart()" class="CB__Btutton">Clear Cart</button>
-    <button onclick="checkout()" class="CB__Btutton">Proceed to Payment</button>
-    <button  id="saveFavourite" class="CB__Btutton">Save as Favorite</button>
-    <button  id="applyFavourite" class="CB__Btutton">Apply Favorite</button>
-    <a href="payment.html"><button class="CB__Btutton">Proceed to Payment</button></a>
+    <div class="cart__total">
+        <div class="cart__total__item">
+            <span>Total Price:</span>
+            <span id="totalPrice">0</span> LKR
+        </div>
+    </div>
+
+    <div class="cart__buttons">
+        <button id="clearCart" class="CB__Btutton">Clear Cart</button>
+        <button  id="saveFavourite" class="CB__Btutton">Save as Favorite</button>
+        <button  id="applyFavourite" class="CB__Btutton">Apply Favorite</button>
+        <a href="payment.html"><button class="CB__Btutton">Proceed to Payment</button></a>
+    </div>
+    
 
 
-    <script src="./scripts//cart.js"></script>
+    <script src="./scripts/cart.js"></script>
     <footer>
         <!--Footer of the website-->
         <div class="Footer__Content">

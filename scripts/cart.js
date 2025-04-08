@@ -1,5 +1,12 @@
+//loadinhg the cart
 document.addEventListener("DOMContentLoaded", loadCart);
 
+// Adding event listener to the clear cart button
+const btnClear = document.getElementById("clearCart");
+btnClear.addEventListener("click", clearCart);
+
+
+// loading the cart items
 function loadCart() {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
     let cartTable = document.getElementById("cartItems");
@@ -21,6 +28,8 @@ function loadCart() {
     document.getElementById("totalPrice").innerText = totalPrice;
 }
 
+
+// Displaying the cart count on page load
 function removeFromCart(index) {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
     cart.splice(index, 1); // Remove item at index
@@ -29,12 +38,17 @@ function removeFromCart(index) {
     updateCartCount(); // Update the cart counter
 }
 
+
+// Function to clear the cart
+// and update the cart count
 function clearCart() {
     localStorage.removeItem("cart");
     loadCart();
     updateCartCount();
 }
 
+
+// Function to update the cart count in the header        
 function updateCartCount() {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
     let cartCountElem = document.getElementById("cartCount");
@@ -44,6 +58,7 @@ function updateCartCount() {
 }
 
 
+// Function to save the current order as a favourite
 document.getElementById("saveFavourite").addEventListener("click", function() {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
     localStorage.setItem("favouriteOrder", JSON.stringify(cart));
@@ -51,6 +66,8 @@ document.getElementById("saveFavourite").addEventListener("click", function() {
 });
 
 
+
+// Function to load the favourite order into the cart
 document.getElementById("applyFavourite").addEventListener("click", function() {
     let favOrder = localStorage.getItem("favouriteOrder");
     if (favOrder) {
