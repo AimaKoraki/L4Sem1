@@ -66,11 +66,11 @@
                     <h4>Personal Details</h4>
                     <div class="input__box">
                         <label>First Name: </label>
-                        <input type="text" placeholder="First Name" required>
+                        <input type="text" placeholder="First Name" required id="fName">
                     </div>
                     <div class="input__box">
                         <label>Last Name: </label>
-                        <input type="text" placeholder="Last Name" required>
+                        <input type="text" placeholder="Last Name" required id="lName">
                     </div>
                     <div class="input__box">
                         <label>Email Address: </label>
@@ -81,7 +81,7 @@
                     <h4>Billing Address</h4>
                     <div class="input__box">
                         <label>Street Address:</label>
-                        <input type="text" placeholder="Street Address" required>
+                        <input type="text" placeholder="Street Address" required id="address">
                     </div>
                     <div class="input__box">
                         <label>City:</label>
@@ -112,7 +112,7 @@
                     </div>
                     <div class="input__box">
                         <label>Card Number:</label>
-                        <input type="tel" placeholder="Card Number" required>
+                        <input type="tel" placeholder="Card Number" required id="cardNumber">
                     </div>
                     <div class="input__box">
                         <label>Expiration Date:</label>
@@ -123,10 +123,26 @@
                         <input type="tel" placeholder="CVC" required>
                     </div>
                 </div>
-                <button type="submit" class="CB__Btutton">Pay</button>
+                <button type="submit" class="CB__Btutton" id="payBtn">Pay</button>
             </form>
         </section>
     </div> 
+
+    <!-- Popup Overlay -->
+<div class="popup__overlay" id="popup">
+    <div class="popup__content">
+        <div class="Content__Wrapper">
+            <div class="leftside">
+                <img src="./my-favicon/favicon-96x96.png" alt="Payment Icon" class="payment__icon">
+            </div>
+            <div class="rightside"></div>
+            <h2>GameSphere</h2>
+        </div>
+        <p id="thankYouMsg"></p>
+        <button id="closePopup">Close</button>
+    </div>
+</div>
+
     <script src="./scripts/pay.js"></script>
     <footer>
         <!--Footer of the website-->
