@@ -1,80 +1,126 @@
-//loadinhg the cart
-document.addEventListener("DOMContentLoaded", loadCart);
+document.addEventListener("DOMContentLoaded", () => {
+    loadCart();
+    updateCartCount();
+});
 
-// Adding event listener to the clear cart button
+document.getElementById("saveFavourite").addEventListener("click", saveFavouriteCart);
+document.getElementById("applyFavourite").addEventListener("click", applyFavouriteCart);
 const btnClear = document.getElementById("clearCart");
 btnClear.addEventListener("click", clearCart);
 
-
-// loading the cart items
 function loadCart() {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
     let cartTable = document.getElementById("cartItems");
-    let totalPrice = 0;
-
-    cartTable.innerHTML = ""; // Clear previous items
+    cartTable.innerHTML = "";
 
     cart.forEach((item, index) => {
-        let row = `<tr>
+        let row = `
+        <tr>
             <td><img src="${item.image}" class="cart__img"></td>
             <td>${item.name}</td>
             <td>${item.price} LKR</td>
+            <td>
+                <button onclick="decreaseQuantity(${index})" class="quantityBtn">-</button>
+                ${item.quantity}
+                <button onclick="increaseQuantity(${index})" class="quantityBtn">+</button>
+            </td>
             <td><button onclick="removeFromCart(${index})" class="CB__Btutton">Remove</button></td>
         </tr>`;
         cartTable.innerHTML += row;
-        totalPrice += item.price;
     });
 
-    document.getElementById("totalPrice").innerText = totalPrice;
+    calculateCartTotal();
+    toggleFavouriteButtons();
 }
 
+function increaseQuantity(index) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    cart[index].quantity += 1;
+    localStorage.setItem("cart", JSON.stringify(cart));
+    loadCart();
+    updateCartCount();
+}
 
-// Displaying the cart count on page load
+function decreaseQuantity(index) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    if (cart[index].quantity > 1) {
+        cart[index].quantity -= 1;
+    } else {
+        cart.splice(index, 1); // Remove if quantity = 1
+    }
+    localStorage.setItem("cart", JSON.stringify(cart));
+    loadCart();
+    updateCartCount();
+}
+
 function removeFromCart(index) {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
-    cart.splice(index, 1); // Remove item at index
+    cart.splice(index, 1);
     localStorage.setItem("cart", JSON.stringify(cart));
-    loadCart(); // Refresh cart display
-    updateCartCount(); // Update the cart counter
+    loadCart();
+    updateCartCount();
 }
 
-
-// Function to clear the cart
-// and update the cart count
 function clearCart() {
     localStorage.removeItem("cart");
     loadCart();
     updateCartCount();
 }
 
+function calculateCartTotal() {
+    let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+    let subtotal = 0;
+    cartItems.forEach(item => {
+        subtotal += item.price * item.quantity;
+    });
+    let deliveryFee = 5;
+    let total = subtotal + deliveryFee;
 
-// Function to update the cart count in the header        
-function updateCartCount() {
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
-    let cartCountElem = document.getElementById("cartCount");
-    if (cartCountElem) {
-        cartCountElem.innerText = cart.length;
-    }
+    document.getElementById("subtotalAmount").innerText = `$${subtotal.toFixed(2)}`;
+    document.getElementById("deliveryFee").innerText = `$${deliveryFee.toFixed(2)}`;
+    document.getElementById("totalAmount").innerText = `$${total.toFixed(2)}`;
 }
 
-
-// Function to save the current order as a favourite
-document.getElementById("saveFavourite").addEventListener("click", function() {
+function updateCartCount() {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
-    localStorage.setItem("favouriteOrder", JSON.stringify(cart));
-    alert("Order saved as favourite!");
-});
+    document.getElementById("cartCount").innerText = cart.reduce((acc, item) => acc + item.quantity, 0);
+}
+function toggleFavouriteButtons() {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const btnSaveFav = document.getElementById("saveFavourite");
+    const btnApplyFav = document.getElementById("applyFavourite");
+    const btnProceed = document.getElementById("proceedToPayment"); // Make sure this ID matches your button
 
+    // Disable Save Favourite if cart is empty
+    btnSaveFav.disabled = cart.length === 0;
 
+    // Disable Apply Favourite if no saved favourite
+    const favOrder = localStorage.getItem("favouriteOrder");
+    btnApplyFav.disabled = !favOrder || favOrder.length === 0;
 
-// Function to load the favourite order into the cart
-document.getElementById("applyFavourite").addEventListener("click", function() {
-    let favOrder = localStorage.getItem("favouriteOrder");
-    if (favOrder) {
-        let cart = JSON.parse(favOrder);
-        localStorage.setItem("cart", JSON.stringify(cart));
-        loadCart(); // Instead of updateCartTable()
-    } else {
-        alert("No favourite order found.");
+    // Disable Proceed to Payment if cart is empty
+    btnProceed.disabled = cart.length === 0;
+}
+
+function saveFavouriteCart() {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    if (cart.length === 0) {
+        alert("Your cart is empty. Add items before saving.");
+        return;
     }
-});
+    localStorage.setItem("favouriteOrder", JSON.stringify(cart));
+    alert("Favourite order saved!");
+    toggleFavouriteButtons();
+}
+
+function applyFavouriteCart() {
+    const favOrder = JSON.parse(localStorage.getItem("favouriteOrder"));
+    if (!favOrder || favOrder.length === 0) {
+        alert("No favourite order found.");
+        return;
+    }
+    localStorage.setItem("cart", JSON.stringify(favOrder));
+    loadCart();
+    updateCartCount();
+    alert("Favourite order applied!");
+}

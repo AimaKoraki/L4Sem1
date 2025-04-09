@@ -121,6 +121,12 @@ a:hover, a:focus-visible{
 a:active{
     color: var(--LINK-ACTIVE);
 }
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
 /*--------------------------------------------------Header-----------------------------------------------------------------*/
 .header {
     display: grid;
@@ -545,7 +551,7 @@ a:active{
 }
 .product__grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     padding: 2rem;
 }
@@ -1356,27 +1362,86 @@ a:active{
   }
 
   /*------------------------------------||Cart page-------------------------------------------------------*/
-  .cart__container {
+  .cart__content {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Wider table, narrower summary */
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.cart__summary {
+    background: var(--ABContainer-COLOR);
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-top: 2rem;
+}
+
+.cart__summary h2 {
+    margin-bottom: 1rem;
+    color: var(--FF-HEADINGS);
+}
+
+.summary__item {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem 0;
+    font-size: 1rem;
+}
+
+.summary__item span:last-child {
+    font-weight: bold;
+}
+
+.table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: #010f1a;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table table th, .table table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.table table th {
+    color: white;
+}
+
+table img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.cart__img {
+    height: 200px;
+    width: auto;
+}
+
+.cart__container {
     padding: 0.5rem;
     font-size: 24px;
     display: flex;
     justify-content: end;
     margin-right: 1rem;
 }
-.cart__IconFixed{
+
+.cart__IconFixed {
     position: fixed;
 }
+
 .cart__icon {
     position: relative;
     text-decoration: none;
     color: black;
     font-size: 30px;
-    
 }
-.cart__img{
-    height: 200px;
-    width: auto;
-}
+
 #cart__count {
     position: absolute;
     top: -10px;
@@ -1391,46 +1456,19 @@ a:active{
     text-align: center;
     line-height: 20px;
 }
-  .table table{
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-    background: #010f1a;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    overflow: hidden;
-  }
 
-table img {
-    width: 100%;       /* Make it scale within its container */
-    height: auto;      /* Maintain aspect ratio */
-    object-fit: contain; /* Optional - prevent image stretching */
-}
-
-
-.CB__Btutton{
+.CB__Btutton {
     background-color: var(--BUTTON-COLOR);
     color: var(--BUTTON-COLOR-TEXT);
-    padding: 0.3rem 1rem;
+    padding: 0.5rem 1.2rem;
     border: none;
     border-radius: 5px;
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    text-decoration: none;
+    margin-top: 1rem;
     display: inline-block;
-    margin-top: auto;    
-}
-
-.table table th, table td {
-    padding: 12px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-}
-
-.table table th {
-    color: white;
 }
 
 #saveFavourite, #applyFavourite {
@@ -1458,32 +1496,26 @@ table img {
     color: var(--FONT-COLOR);
     margin-bottom: 20px;
 }
-@media (max-width: 600px) {
-    .table table {
-        font-size: 14px;
-    }
-    .table button {
-        font-size: 14px;
-        padding: 8px;
-    }
-}
-@media (max-width: 600px) {
-    .cart__buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-    #applyFavourite, #saveFavourite, #clearCart {
-        flex-direction: column;
-        align-items: stretch;
-        margin-bottom: 2rem;
-        max-width: 70%;
-    }
 
-    #applyFavourite, #saveFavourite, #clearCart button,
-    #applyFavourite, #saveFavourite, #clearCart {
-        width: 100%;
-    }
+.quantityBtn {
+    background-color: #1d3557;
+    color: white;
+    border: none;
+    padding: 4px 10px;
+    margin: 0 3px;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s ease;
 }
+
+.quantityBtn:hover {
+    background-color: #457b9d;
+}
+
+
+
+
 
 /*------------------------------------||Payment page-------------------------------------------------------*/
 /* Container */
@@ -1548,23 +1580,6 @@ table img {
 }
 
 
-/* Submit Button */
-.CB__Btutton {
-    background-color: #4CAF50;
-    color: #fff;
-    width: 100%;
-    padding: 1rem;
-    font-size: 1.1rem;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    margin-top: 1.5rem;
-    transition: background 0.3s;
-}
-
-.CB__Btutton:hover {
-    background-color: #45a049;
-}
 
 .payment__method {
     display: flex;

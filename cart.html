@@ -53,32 +53,42 @@
             </nav>
         </div>       
     </header>
-    <h2>Your Cart</h2>
-    <div class="table">
-        <table>
-            <thead>
-                <tr>
-                    <th></th>
-                    <th>Item</th>
-                    <th>Price</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody id="cartItems"></tbody>
-        </table>    
-    </div>
-    <div class="cart__total">
-        <div class="cart__total__item">
-            <span>Total Price:</span>
-            <span id="totalPrice">0</span> LKR
+    <div class="cart__content">
+        <!-- Cart Table Section -->
+        <div class="table">
+            <h2>Your Cart</h2>
+            <table>
+                <thead> ... </thead>
+                <tbody id="cartItems"></tbody>
+            </table>    
+        </div>
+    
+        <!-- Order Summary Section -->
+        <div class="cart__summary">
+            <h2>Order Summary</h2>
+            <div class="summary__item">
+                <span>Subtotal:</span>
+                <span id="subtotalAmount">$0.00</span>
+            </div>
+            <div class="summary__item">
+                <span>Delivery Fee:</span>
+                <span id="deliveryFee">$5.00</span>
+            </div>
+            <div class="summary__item">
+                <span>Total:</span>
+                <span id="totalAmount">$0.00</span>
+            </div>
+            <a href="payment.html"><button class="CB__Btutton" id="proceedToPayment">Proceed to Payment</button></a>
         </div>
     </div>
+    
+        
+    
 
     <div class="cart__buttons">
         <button id="clearCart" class="CB__Btutton">Clear Cart</button>
         <button  id="saveFavourite" class="CB__Btutton">Save as Favorite</button>
         <button  id="applyFavourite" class="CB__Btutton">Apply Favorite</button>
-        <a href="payment.html"><button class="CB__Btutton">Proceed to Payment</button></a>
     </div>
     
 
