@@ -54,7 +54,7 @@ function displayProducts(categories) {
                 <div class="shop__buttons">
                     <div class="shop__buttons__Container">
                         <div class="price__box">
-                            <span class="price">$${product.price.toFixed(2)}</span>
+                            <span class="price">${product.price.toFixed(2)} LKR</span>
                         </div>            
                         <button class="shop__button" onclick="addToCart('${product.name}', ${product.price}, '${product.image}')">Add to Cart</button>
                     </div>

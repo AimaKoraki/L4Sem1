@@ -548,6 +548,7 @@ button:disabled {
 }
 .featured__products h2{
     text-align: center;
+    border-bottom: 2px solid var(--FONT-COLOR);
 }
 .product__grid {
     display: grid;
@@ -1653,4 +1654,8 @@ table img {
     cursor: pointer;
 }
 
-
+.product-section h2{
+    margin: 1rem;
+    text-align: center;
+    border-bottom: 2px solid var(--FONT-COLOR);
+}

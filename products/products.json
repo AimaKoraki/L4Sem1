@@ -3,50 +3,50 @@
         {
             "category": "Featured Products",
             "items": [
-                { "name": "PlayStation 5", "image": "./images/PS5.webp", "price": 499.99 },
-                { "name": "Xbox Series X", "image": "./images/Xbox.webp", "price": 499.99 },
-                { "name": "Nintendo Switch", "image": "./images/Nintendo.webp", "price": 299.99 }
+                { "name": "PlayStation 5", "image": "./images/PS5.webp", "price": 259000 },
+                { "name": "Xbox Series X", "image": "./images/Xbox.webp", "price": 235000 },
+                { "name": "Nintendo Switch", "image": "./images/Nintendo.webp", "price":104580 }
             ]
         },
         {
             "category": "Xbox",
             "items": [
-                { "name": "Xbox Series S - 1TB (White)", "image": "./images/consoles/XboxSeriesS-1TB(White).webp", "price": 299.99 },
-                { "name": "Xbox Series X - 1TB Digital Edition", "image": "./images/consoles/XboxSeriesX-1TBGalaxyBSE.webp", "price": 299.99 },
-                { "name": "Xbox Series X - 2TB Special Edition", "image": "./images/consoles/XboxSeriesX_2TB_GBEdition.webp", "price": 299.99 }
+                { "name": "Xbox Series S - 1TB (White)", "image": "./images/consoles/XboxSeriesS-1TB(White).webp", "price": 135700 },
+                { "name": "Xbox Series X - 1TB Digital Edition", "image": "./images/consoles/XboxSeriesX-1TBGalaxyBSE.webp", "price": 235000 },
+                { "name": "Xbox Series X - 2TB Special Edition", "image": "./images/consoles/XboxSeriesX_2TB_GBEdition.webp", "price": 255000 }
             ]
         },
         {
             "category": "Nintendo",
             "items": [
-                { "name": "Nintendo Switch OLED", "image": "./images/consoles/Switch-OLED.webp", "price": 299.99 },
-                { "name": "Nintendo Switch Lite", "image": "./images/consoles/Nintendo-Switch-lite-3.webp", "price": 299.99 },
-                { "name": "Nintendo Switch", "image": "./images/Nintendo.webp", "price": 299.99 }
+                { "name": "Nintendo Switch OLED", "image": "./images/consoles/Switch-OLED.webp", "price": 104580 },
+                { "name": "Nintendo Switch Lite", "image": "./images/consoles/Nintendo-Switch-lite-3.webp", "price": 75000 },
+                { "name": "Nintendo Switch", "image": "./images/Nintendo.webp", "price": 59740 }
             ]
         },
         {
             "category": "PlayStation",
             "items": [
-                { "name": "PlayStation 5", "image": "./images/PS5.webp", "price": 499.99 },
-                { "name": "PlayStation 4", "image": "./images/consoles/pS4.webp", "price": 499.99 },
-                { "name": "PlayStation 3", "image": "./images/consoles/ps3_60gb_pak__37675.webp", "price": 299.99 }
+                { "name": "PlayStation 5", "image": "./images/PS5.webp", "price": 259000 },
+                { "name": "PlayStation 4", "image": "./images/consoles/pS4.webp", "price": 159000 },
+                { "name": "PlayStation 3", "image": "./images/consoles/ps3_60gb_pak__37675.webp", "price": 129000 }
             ]
         }
     ],
     "computerParts": [
         {
-            "category": "processors",
+            "category": "Processors",
             "items": [
-                { "name": "Intel i5 Processor", "image": "./images/products/intel-i5.webp", "price": 200 },
-                { "name": "Intel i7 Processor", "image": "./images/products/intel-i7.webp", "price": 300 },
-                { "name": "Intel i9 Processor", "image": "./images/products/intel-i9.webp", "price": 250 },
-                { "name": "AMD Ryzen 5", "image": "./images/products/rysen-5.webp", "price": 300 },
-                { "name": "AMD Ryzen 7", "image": "./images/products/rysen-7.webp", "price": 250 },
-                { "name": "AMD Ryzen 9", "image": "./images/products/rysen-9.webp", "price": 350 }
+                { "name": "Intel i5 Processor", "image": "./images/products/intel-i5.webp", "price": 43000 },
+                { "name": "Intel i7 Processor", "image": "./images/products/intel-i7.webp", "price": 57000 },
+                { "name": "Intel i9 Processor", "image": "./images/products/intel-i9.webp", "price": 98000 },
+                { "name": "AMD Ryzen 5", "image": "./images/products/rysen-5.webp", "price": 21000 },
+                { "name": "AMD Ryzen 7", "image": "./images/products/rysen-7.webp", "price": 109000 },
+                { "name": "AMD Ryzen 9", "image": "./images/products/rysen-9.webp", "price": 172000 }
                     ]
         },
         {
-            "category": "graphicsCards",
+            "category": "GraphicsCards",
             "items": [
                 { "name": "ZOTAC GAMING RTX 3050 ECO 8GB", "image": "./images/products/RTX3050.webp", "price": 80000 },
                 { "name": "ASUS TUF Gaming RTX 5080 16GB GDDR7", "image": "./images/products/RTX3050.webp", "price": 699000 },
@@ -57,7 +57,7 @@
             ]
         },
         {
-            "category": "motherboards",
+            "category": "Motherboards",
             "items": [
                 { "name": "ASUS PRIME A620M-K", "image": "./images/products/ASUSPRIMEA620MK.webp", "price": 80000 },
                 { "name": "ASUS PRIME B450M-A II", "image": "./images/products/ASUSPRIMEB450.webp", "price": 699000 },
@@ -68,7 +68,7 @@
             ]
         },
         {
-            "category": "ram",
+            "category": "RAM",
             "items": [
                 { "name": "G.SKILL TridentZ5 RGB 32GB (2 x 16GB) DDR5 5600Mhz Silver - Intel", "image": "./images/products/GSKILLTridentZ5.webp", "price": 32000 },
                 { "name": "TEAM T-CREATE EXPERT (64GB-96GB) KIT 6400Mhz", "image": "./images/products/TEAMT-CREATE-EXPERT.webp", "price": 45000 },
@@ -78,7 +78,7 @@
             ]
         },
         {
-            "category": "storage",
+            "category": "Storage",
             "items": [
                 { "name": "Corsair MP700 PRO 1TB PCIe Gen5 x4 NVMe 2.0 M.2 SSD", "image": "./images/products/CorsairMP700.webp", "price": 80000 },
                 { "name": "KINGSTON NV3 NVMe PCIe Gen 4.0 1TB", "image": "./images/products/KINGSTONNV3.webp", "price": 699000 },
