@@ -30,7 +30,7 @@ function displayProducts(categories) {
         console.error("Error: products-container not found in HTML!");
         return;
     }
-    container.innerHTML = ""; 
+    container.innerHTML = "";
 
     categories.forEach(category => {
         const section = document.createElement("section");
@@ -56,7 +56,12 @@ function displayProducts(categories) {
                         <div class="price__box">
                             <span class="price">${product.price.toFixed(2)} LKR</span>
                         </div>            
-                        <button class="shop__button" onclick="addToCart('${product.name}', ${product.price}, '${product.image}')">Add to Cart</button>
+                        <button class="shop__button" 
+                            data-name="${product.name}" 
+                            data-price="${product.price}" 
+                            data-image="${product.image}">
+                            Add to Cart
+                        </button>
                     </div>
                 </div>`;
 
@@ -64,6 +69,17 @@ function displayProducts(categories) {
         });
 
         container.appendChild(section);
+    });
+
+    // Attach event listener to all "Add to Cart" buttons
+    const addToCartButtons = container.querySelectorAll(".shop__button");
+    addToCartButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            const name = button.dataset.name;
+            const price = parseFloat(button.dataset.price);
+            const image = button.dataset.image;
+            addToCart(name, price, image);
+        });
     });
 }
 
