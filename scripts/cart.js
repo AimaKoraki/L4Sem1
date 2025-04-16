@@ -131,7 +131,11 @@ function toggleFavouriteButtons() {
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
     const btnSaveFav = document.getElementById("saveFavourite");
     const btnApplyFav = document.getElementById("applyFavourite");
-    const btnProceed = document.getElementById("proceedToPayment"); // Make sure this ID matches your button
+    const btnProceed = document.getElementById("proceedToPayment"); 
+
+    btnProceed.addEventListener("click", () => {
+        window.location.href = "payment.html";
+    });
 
     // Disable Save Favourite if cart is empty
     btnSaveFav.disabled = cart.length === 0;
