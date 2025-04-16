@@ -89,7 +89,7 @@
                     </div>
                     <div class="input__box">
                         <label>Zip Code:</label>
-                        <input type="text" placeholder="Zip Code" required>
+                        <input type="text" placeholder="Zip Code" id="zip" required>
                     </div>
                 </div>
                 <div class="input__group">
@@ -108,7 +108,7 @@
                     </div>
                     <div class="input__box">
                         <label>Name on Card:</label>
-                        <input type="text" placeholder="Cardholder Name" required>
+                        <input type="text" placeholder="Cardholder Name" required id="nameOnCard">
                     </div>
                     <div class="input__box">
                         <label>Card Number:</label>
@@ -120,7 +120,7 @@
                     </div>
                     <div class="input__box">
                         <label>Card CVC:</label>
-                        <input type="tel" placeholder="CVC" required>
+                        <input type="tel" placeholder="CVC"  id="cvc" required>
                     </div>
                 </div>
                 <button type="submit" class="CB__Btutton" id="payBtn">Pay</button>
@@ -129,7 +129,7 @@
     </div> 
 
     <!-- Popup Overlay -->
-<div class="popup__overlay" id="popup">
+<div id="popup" style="display:none;" role="alertdialog" aria-hidden="true">
     <div class="popup__content">
         <div class="Content__Wrapper">
             <div class="leftside">

@@ -1614,7 +1614,7 @@ table img {
 }
 
 /* Popup Overlay */
-.popup__overlay {
+#popup  {
     position: fixed;
     top: 0;
     left: 0;
