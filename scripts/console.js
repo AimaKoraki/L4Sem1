@@ -22,8 +22,8 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// Function to display products on the page
-// This function takes an array of categories and their respective items, creates HTML elements for each product, and appends them to the container.
+// ------------------------Function to display products on the page ------------------------
+// -------------This function takes an array of categories and their respective items, creates HTML elements for each product, and appends them to the container------------------------.
 function displayProducts(categories) {
     const container = document.querySelector(".products-container");
     if (!container) {
@@ -71,7 +71,7 @@ function displayProducts(categories) {
         container.appendChild(section);
     });
 
-    // Attach event listener to all "Add to Cart" buttons
+    // ------------------------Attach event listener to all "Add to Cart" buttons------------------------
     const addToCartButtons = container.querySelectorAll(".shop__button");
     addToCartButtons.forEach(button => {
         button.addEventListener("click", () => {
@@ -86,8 +86,8 @@ function displayProducts(categories) {
 
 
 
-// Function to add an item to the cart
-// This function takes the item name, price, and image as parameters, checks if the item already exists in the cart, and updates the cart accordingly.
+// ------------------------Function to add an item to the cart------------------------
+// ------------------------This function takes the item name, price, and image as parameters, checks if the item already exists in the cart, and updates the cart accordingly.------------------------
 function addToCart(itemName, itemPrice, itemImage) {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
@@ -106,7 +106,7 @@ function addToCart(itemName, itemPrice, itemImage) {
 }
 
 
-// Function to load the cart items from localStorage and display them in the cart table
+// ------------------------Function to load the cart items from localStorage and display them in the cart table ------------------------
 function updateCartCount() {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
     let totalItems = cart.reduce((sum, item) => sum + item.quantity, 0); // Sum up item quantities

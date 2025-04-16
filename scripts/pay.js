@@ -1,3 +1,4 @@
+//------------------------ This script handles the payment form validation and submission. ------------------------
 document.addEventListener("DOMContentLoaded", () => {
     // Connect Pay button
     document.getElementById("payBtn")?.addEventListener("click", submitOrder);
@@ -12,7 +13,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-
+//------------------------ Function to submit the order ------------------------
+// ------------------------ This function validates the payment form fields and shows a thank you message if valid. It also clears the cart. ------------------------
 function submitOrder(event) {
 
 
@@ -40,7 +42,7 @@ function submitOrder(event) {
         return;
     }
 
-    // ✅ If valid: show thank you message and clear cart
+    // ------------------------ If valid: show thank you message and clear cart ------------------------
     const name = firstName + " " + lastName;
     const thankYouMsg = document.getElementById('thankYouMsg');
     if (thankYouMsg) {
@@ -53,7 +55,7 @@ function submitOrder(event) {
         popup.setAttribute("aria-hidden", "false");
     }
 
-    // ✅ Clear the cart
+    // ------------------------ Clear the cart ------------------------
     localStorage.removeItem("cart");
     updateCartCount?.(); // optional: update cart count in header if that function exists
     loadCart?.();        // optional: reload empty cart view if this exists

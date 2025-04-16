@@ -1,4 +1,4 @@
-//* This script handles the cart functionality, including adding, removing, and updating items in the cart.
+//----------------This script handles the cart functionality, including adding, removing, and updating items in the cart.----------------------------------
 
 document.addEventListener("DOMContentLoaded", () => {
     loadCart();
@@ -6,14 +6,14 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-//* Event listeners for buttons
+// --------------------------------------------------- Event listeners for buttons --------------------------------------------------
 document.getElementById("saveFavourite").addEventListener("click", saveFavouriteCart);
 document.getElementById("applyFavourite").addEventListener("click", applyFavouriteCart);
 const btnClear = document.getElementById("clearCart");
 btnClear.addEventListener("click", clearCart);
 
 
-//* Function to load the cart from local storage and display it in the table
+//----------------------------------------Function to load the cart from local storage and display it in the table ----------------------------------------------
 function loadCart() {
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
     const cartTable = document.getElementById("cartItems");
@@ -40,8 +40,8 @@ function loadCart() {
 }
 
 
-//* Event listener for quantity buttons and remove button
-//* This event listener is responsible for handling the quantity increase, decrease, and remove actions.
+//-------------------------------------- Event listener for quantity buttons and remove button---------------------------------------
+//-------------------This event listener is responsible for handling the quantity increase, decrease, and remove actions.-----------------------
 document.getElementById("cartItems").addEventListener("click", (e) => {
     const button = e.target;
     const action = button.dataset.action;
@@ -62,8 +62,8 @@ document.getElementById("cartItems").addEventListener("click", (e) => {
     }
 });
 
-
-//* Functions to handle cart operations
+-
+//------------------------Functions to handle cart operations-------------------------
 function increaseQuantity(index) {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
     cart[index].quantity += 1;
@@ -73,7 +73,7 @@ function increaseQuantity(index) {
 }
 
 
-//* Decrease quantity or remove item if quantity is 1
+//------------------- Decrease quantity or remove item if quantity is 1 ----------------------------------
 function decreaseQuantity(index) {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
     if (cart[index].quantity > 1) {
@@ -87,7 +87,7 @@ function decreaseQuantity(index) {
 }
 
 
-//* Remove item from cart
+//------------------------------------- Remove item from cart------------------------------------
 function removeFromCart(index) {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
     cart.splice(index, 1);
@@ -97,7 +97,7 @@ function removeFromCart(index) {
 }
 
 
-//* Clear the entire cart
+//----------------------------- Clear the entire cart --------------------
 function clearCart() {
     localStorage.removeItem("cart");
     loadCart();
@@ -105,7 +105,7 @@ function clearCart() {
 }
 
 
-//* Calculate the total price of the cart
+//------------------------------------ Calculate the total price of the cart --------------------------
 function calculateCartTotal() {
     let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
     let subtotal = 0;
@@ -121,8 +121,8 @@ function calculateCartTotal() {
 }
 
 
-//* Update the cart count in the header
-//* This function updates the cart count displayed in the header of the page.
+//--------------------------- Update the cart count in the header ------------------------
+//------------------------ This function updates the cart count displayed in the header of the page. ------------------------ 
 function updateCartCount() {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
     document.getElementById("cartCount").innerText = cart.reduce((acc, item) => acc + item.quantity, 0);
@@ -146,7 +146,7 @@ function toggleFavouriteButtons() {
 }
 
 
-//* Save the current cart as a favourite order
+//------------------------ Save the current cart as a favourite order ------------------------
 function saveFavouriteCart() {
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
     if (cart.length === 0) {
@@ -159,7 +159,7 @@ function saveFavouriteCart() {
 }
 
 
-//* Apply the saved favourite order to the cart
+// ------------------------ Apply the saved favourite order to the cart ------------------------
 function applyFavouriteCart() {
     const favOrder = JSON.parse(localStorage.getItem("favouriteOrder"));
     if (!favOrder || favOrder.length === 0) {
