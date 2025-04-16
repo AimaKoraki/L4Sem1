@@ -95,11 +95,17 @@ html{
     font-family: var(--FF);
     background-color: var(--BGCOLOR);
     background-image: var(--BGIMAGE);
+    background-image: url(../images/bgPattern.svg);
+    background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
 }
 
 body{
     overflow-x: hidden;
     background-color: var(--BODY-BGCOLOR);
+
     color: var(--FONT-COLOR);
     min-height: 100vh;
     max-width: 1800px;
