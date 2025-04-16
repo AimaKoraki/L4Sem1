@@ -1,7 +1,7 @@
 {
   "name": "GameSphere",
   "short_name": "GameSphere",
-  "start_url":"./index.html",
+  "start_url":"https://aimakoraki.github.io/L4Sem1/index.html",
   "icons": [
     {
       "src": "/my-favicon/web-app-manifest-192x192.png",
