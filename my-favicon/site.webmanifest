@@ -1,7 +1,6 @@
 {
-  "name": "GameSphere",
-  "short_name": "GameSphere",
-  "start_url":"https://aimakoraki.github.io/L4Sem1/index.html",
+  "name": "Game Sphere",
+  "short_name": "Game Sphere",
   "icons": [
     {
       "src": "/my-favicon/web-app-manifest-192x192.png",
@@ -16,7 +15,10 @@
       "purpose": "maskable"
     }
   ],
-  "theme_color": "#021825",
+  "theme_color": "#05131d",
   "background_color": "#05131d",
-  "display": "standalone"
+  "display": "standalone",
+  "start_url": "./index.html",
+  "scope": "./"
+
 }

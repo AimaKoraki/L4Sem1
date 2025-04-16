@@ -34,8 +34,8 @@ button{
     --BGCOLOR-FADE:#021825;
     --BGCOLOR: #05131d;
     --BGIMAGE: linear-gradient(to bottom, var(--BGCOLOR), var(--BGCOLOR-FADE));
-    --BODY-BGCOLOR: #091e2c;
-    --BORDER-COLOR: #082f49;
+    --BODY-BGCOLOR: #   ;
+    --BORDER-COLOR: #   ;
     --BUTTON-COLOR: #ff6600;
     --HEADING-FONT-COLOR:#e0f2fe;
     --BUTTON-HOVER:#082f49;
