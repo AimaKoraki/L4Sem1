@@ -117,15 +117,8 @@ body{
 p{
     line-height: 1.5;
 }
-a:any-link{
+a:any-link, a:hover, a:focus-visible, a:active {
     color: var(--LINK-COLOR);
-}
-a:hover, a:focus-visible{
-    color: var(--LINK-HOVER);
-
-}
-a:active{
-    color: var(--LINK-ACTIVE);
 }
 
 button:disabled {
@@ -176,7 +169,7 @@ button:disabled {
     transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.header__ul a:hover, .dropbtn:hover {
+.header__ul a:hover, .dropbtn:hover, .dropdown-content a:hover {
     background-color: var(--HEADER-COLOR-HOVER);
     color: var(--HEADER-FCOLOR-HOVER);
     
@@ -230,11 +223,6 @@ button:disabled {
     display: block;
     position: relative;
     background-color: var(--HEADER-BGCOLOR);
-}
-
-.dropdown-content a:hover {
-    background-color: var(--HEADER-COLOR-HOVER);
-    color: var(--HEADER-FCOLOR-HOVER);
 }
 
  /*--------------------------------------------------------------------------||Footer-----------------------------------------------------------------------------------------*/
