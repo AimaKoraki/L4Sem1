@@ -707,7 +707,7 @@ button:disabled {
 
 .CCB__Btutton{
     background-color: var(--BUTTON-COLOR);
-    color: var(--BUTTON-COLOR-TEXT);
+    color: var(--BUTTON-COLOR-TEXT) !important;
     padding: 0.8rem 2rem;
     border: none;
     border-radius: 5px;
