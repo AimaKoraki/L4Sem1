@@ -42,7 +42,7 @@ function submitOrder(event) {
 
     // 🔒 Date validation: make sure expiration date is not in the past
     if (expDate) {
-        const [expYear, expMonth] = expDate.split("-").map(Number);
+        const [expMonth, expYear] = expDate.split("-").map(Number);
     
         const today = new Date();
         const currentYear = today.getFullYear();
