@@ -64,68 +64,72 @@
             </div>
             <form>
                 <div class="input__group">
-                    <h4>Personal Details</h4>
-                    <div class="input__box">
-                        <label>First Name: </label>
-                        <input type="text" placeholder="First Name" required id="fName">
-                    </div>
-                    <div class="input__box">
-                        <label>Last Name: </label>
-                        <input type="text" placeholder="Last Name" required id="lName">
-                    </div>
-                    <div class="input__box">
-                        <label>Email Address: </label>
-                        <input type="email" placeholder="Email" required>
-                    </div>
+                  <h4>Personal Details</h4>
+                  <div class="input__box">
+                    <label for="fName">First Name:</label>
+                    <input type="text" placeholder="First Name" required id="fName">
+                  </div>
+                  <div class="input__box">
+                    <label for="lName">Last Name:</label>
+                    <input type="text" placeholder="Last Name" required id="lName">
+                  </div>
+                  <div class="input__box">
+                    <label for="email">Email Address:</label>
+                    <input type="email" placeholder="Email" required id="email">
+                  </div>
                 </div>
+              
                 <div class="input__group">
-                    <h4>Billing Address</h4>
-                    <div class="input__box">
-                        <label>Street Address:</label>
-                        <input type="text" placeholder="Street Address" required id="address">
-                    </div>
-                    <div class="input__box">
-                        <label>City:</label>
-                        <input type="text" placeholder="City" required>
-                    </div>
-                    <div class="input__box">
-                        <label>Zip Code:</label>
-                        <input type="text" placeholder="Zip Code" id="zip" required>
-                    </div>
+                  <h4>Billing Address</h4>
+                  <div class="input__box">
+                    <label for="address">Street Address:</label>
+                    <input type="text" placeholder="Street Address" required id="address">
+                  </div>
+                  <div class="input__box">
+                    <label for="city">City:</label>
+                    <input type="text" placeholder="City" required id="city">
+                  </div>
+                  <div class="input__box">
+                    <label for="zip">Zip Code:</label>
+                    <input type="text" placeholder="Zip Code" id="zip" required>
+                  </div>
                 </div>
+              
                 <div class="input__group">
-                    <h4>Payment Details</h4>
-                    <div class="payment__method">
-                        <label>
-                            <input type="radio" name="paymentMethod" value="MasterCard" required>
-                            <i class="fa-brands fa-cc-visa"></i>
-                            Visa
-                        </label>
-                        <label>
-                            <input type="radio" name="paymentMethod" value="Visa" required>
-                            <i class="fa-brands fa-cc-mastercard"></i>
-                            MasterCard
-                        </label>
-                    </div>
-                    <div class="input__box">
-                        <label>Name on Card:</label>
-                        <input type="text" placeholder="Cardholder Name" required id="nameOnCard">
-                    </div>
-                    <div class="input__box">
-                        <label>Card Number:</label>
-                        <input type="tel" placeholder="Card Number" required id="cardNumber">
-                    </div>
-                    <div class="input__box">
-                        <label>Expiration Date:</label>
-                        <input type="month" required>
-                    </div>
-                    <div class="input__box">
-                        <label>Card CVC:</label>
-                        <input type="tel" placeholder="CVC"  id="cvc" required>
-                    </div>
+                  <h4>Payment Details</h4>
+                  <div class="payment__method">
+                    <label>
+                      <input type="radio" name="paymentMethod" value="MasterCard" required>
+                      <i class="fa-brands fa-cc-visa"></i>
+                      Visa
+                    </label>
+                    <label>
+                      <input type="radio" name="paymentMethod" value="Visa" required>
+                      <i class="fa-brands fa-cc-mastercard"></i>
+                      MasterCard
+                    </label>
+                  </div>
+                  <div class="input__box">
+                    <label for="nameOnCard">Name on Card:</label>
+                    <input type="text" placeholder="Cardholder Name" required id="nameOnCard">
+                  </div>
+                  <div class="input__box">
+                    <label for="cardNumber">Card Number:</label>
+                    <input type="tel" placeholder="Card Number" required id="cardNumber">
+                  </div>
+                  <div class="input__box">
+                    <label for="expDate">Expiration Date:</label>
+                    <input type="month" required id="expDate">
+                  </div>
+                  <div class="input__box">
+                    <label for="cvc">Card CVC:</label>
+                    <input type="tel" placeholder="CVC" id="cvc" required>
+                  </div>
                 </div>
+              
                 <button type="submit" class="CB__Btutton" id="payBtn">Pay</button>
-            </form>
+              </form>
+              
         </section>
     </div> 
 
