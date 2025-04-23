@@ -20,11 +20,12 @@ function submitOrder(event) {
 
     const firstName = document.getElementById("fName")?.value.trim();
     const lastName = document.getElementById("lName")?.value.trim();
-    const email = document.getElementById("useremail")?.value.trim();
+    const email = document.getElementById("email")?.value.trim();
     const nameOnCard = document.getElementById("nameOnCard")?.value.trim();
     const cardNumber = document.getElementById("cardNumber")?.value.trim();
     const cvc = document.getElementById("cvc")?.value.trim();
     const zip = document.getElementById("zip")?.value.trim();
+    const expDate = document.getElementById("expDate")?.value;
 
     let errors = [];
 
@@ -38,6 +39,19 @@ function submitOrder(event) {
     if (!/^\d{16}$/.test(cardNumber)) errors.push("Card number must be exactly 16 digits.");
     if (!/^\d{3}$/.test(cvc)) errors.push("CVC must be exactly 3 digits.");
     if (!/^\d{5}$/.test(zip)) errors.push("ZIP code must be exactly 5 digits.");
+
+    // 🔒 Date validation: make sure expiration date is not in the past
+    if (expDate) {
+        const today = new Date();
+        const selectedDate = new Date(expDate + "-01"); // Convert YYYY-MM to full date
+        selectedDate.setMonth(selectedDate.getMonth() + 1); // move to end of month
+
+        if (selectedDate <= today) {
+            errors.push("Expiration date must be in the future.");
+        }
+    } else {
+        errors.push("Expiration date is required.");
+    }
 
     if (errors.length > 0) {
         alert(errors.join("\n"));
