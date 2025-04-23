@@ -27,9 +27,10 @@ function loadCart() {
             <td>${item.price} LKR</td>
             <td>
                 <button class="quantityBtn" data-action="decrease" data-index="${index}">-</button>
-                ${item.quantity}
+                <span class="item-qty" data-index="${index}">${item.quantity}</span>
                 <button class="quantityBtn" data-action="increase" data-index="${index}">+</button>
             </td>
+
             <td><button class="CB__Btutton" data-action="remove" data-index="${index}">Remove</button></td>
         </tr>`;
         cartTable.innerHTML += row;
@@ -62,7 +63,6 @@ document.getElementById("cartItems").addEventListener("click", (e) => {
     }
 });
 
--
 //------------------------Functions to handle cart operations-------------------------
 function increaseQuantity(index) {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -125,8 +125,12 @@ function calculateCartTotal() {
 //------------------------ This function updates the cart count displayed in the header of the page. ------------------------ 
 function updateCartCount() {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
-    document.getElementById("cartCount").innerText = cart.reduce((acc, item) => acc + item.quantity, 0);
+    const cartCountEl = document.getElementById("cartCount");
+    if (cartCountEl) {
+        cartCountEl.innerText = cart.reduce((acc, item) => acc + item.quantity, 0);
+    }
 }
+
 function toggleFavouriteButtons() {
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
     const btnSaveFav = document.getElementById("saveFavourite");

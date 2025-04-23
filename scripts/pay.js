@@ -45,16 +45,24 @@ function submitOrder(event) {
     // ------------------------ If valid: show thank you message and clear cart ------------------------
     const name = firstName + " " + lastName;
     const thankYouMsg = document.getElementById('thankYouMsg');
+    
     if (thankYouMsg) {
-        thankYouMsg.innerText = `Thank you for your purchase, ${name}! Your order will be delivered soon.`;
+        const purchaseDate = new Date();
+        const deliveryDate = new Date(purchaseDate);
+        deliveryDate.setDate(purchaseDate.getDate() + 7);
+    
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        const formattedDeliveryDate = deliveryDate.toLocaleDateString(undefined, options);
+    
+        thankYouMsg.innerText = `Thank you for your purchase, ${name}! Your order will be delivered by ${formattedDeliveryDate}.`;
     }
-
+    
     const popup = document.getElementById('popup');
     if (popup) {
         popup.style.display = "flex";
         popup.setAttribute("aria-hidden", "false");
     }
-
+    
     // ------------------------ Clear the cart ------------------------
     localStorage.removeItem("cart");
     updateCartCount?.(); // optional: update cart count in header if that function exists
