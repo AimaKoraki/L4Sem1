@@ -16,12 +16,11 @@ document.addEventListener("DOMContentLoaded", () => {
 //------------------------ Function to submit the order ------------------------
 // ------------------------ This function validates the payment form fields and shows a thank you message if valid. It also clears the cart. ------------------------
 function submitOrder(event) {
-
-
     event.preventDefault();
 
     const firstName = document.getElementById("fName")?.value.trim();
     const lastName = document.getElementById("lName")?.value.trim();
+    const email = document.getElementById("useremail")?.value.trim();
     const nameOnCard = document.getElementById("nameOnCard")?.value.trim();
     const cardNumber = document.getElementById("cardNumber")?.value.trim();
     const cvc = document.getElementById("cvc")?.value.trim();
@@ -30,8 +29,11 @@ function submitOrder(event) {
     let errors = [];
 
     const nameRegex = /^[A-Za-z\s]+$/;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
     if (!nameRegex.test(firstName)) errors.push("First name must contain only letters.");
     if (!nameRegex.test(lastName)) errors.push("Last name must contain only letters.");
+    if (!emailRegex.test(email)) errors.push("Please enter a valid email address.");
     if (!nameRegex.test(nameOnCard)) errors.push("Name on card must contain only letters.");
     if (!/^\d{16}$/.test(cardNumber)) errors.push("Card number must be exactly 16 digits.");
     if (!/^\d{3}$/.test(cvc)) errors.push("CVC must be exactly 3 digits.");
@@ -41,7 +43,6 @@ function submitOrder(event) {
         alert(errors.join("\n"));
         return;
     }
-
     // ------------------------ If valid: show thank you message and clear cart ------------------------
     const name = firstName + " " + lastName;
     const thankYouMsg = document.getElementById('thankYouMsg');
