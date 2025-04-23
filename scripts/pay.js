@@ -42,21 +42,19 @@ function submitOrder(event) {
 
     // 🔒 Date validation: make sure expiration date is not in the past
     if (expDate) {
+        const [expYear, expMonth] = expDate.split("-").map(Number);
+    
         const today = new Date();
-        const selectedDate = new Date(expDate + "-01"); // Convert YYYY-MM to full date
-        selectedDate.setMonth(selectedDate.getMonth() + 1); // move to end of month
-
-        if (selectedDate <= today) {
+        const currentYear = today.getFullYear();
+        const currentMonth = today.getMonth() + 1; // getMonth() is 0-based
+    
+        if (expYear < currentYear || (expYear === currentYear && expMonth < currentMonth)) {
             errors.push("Expiration date must be in the future.");
         }
     } else {
         errors.push("Expiration date is required.");
     }
-
-    if (errors.length > 0) {
-        alert(errors.join("\n"));
-        return;
-    }
+    
     // ------------------------ If valid: show thank you message and clear cart ------------------------
     const name = firstName + " " + lastName;
     const thankYouMsg = document.getElementById('thankYouMsg');
