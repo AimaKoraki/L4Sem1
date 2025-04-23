@@ -117,7 +117,7 @@ body{
 p{
     line-height: 1.5;
 }
-a:any-link, a:hover, a:focus-visible, a:active {
+a:any-link:not(.cart__icon):not(.CCB__Bbutton), a:hover, a:focus-visible, a:active {
     color: var(--LINK-COLOR);
 }
 
@@ -1435,12 +1435,13 @@ table img {
 
 .cart__IconFixed {
     position: fixed;
+    z-index:1000 ;
 }
 
 .cart__icon {
     position: relative;
     text-decoration: none;
-    color: black;
+    color: #00FFFF;
     font-size: 30px;
 }
 
