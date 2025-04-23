@@ -62,9 +62,14 @@
             Whether you're a casual gamer or a hardcore enthusiast, we have something for everyone.</p>
             <!--searchbar-->
             <form class="search-bar" action="search.html" method="get">
-                <input type="submit" name="q" placeholder="Search..." >
-                <button type="submit"><i class="fas fa-search"></i></button>
+                <label for="search" class="visually__hidden">Search this site</label>
+                <input type="text" id="search" name="q" placeholder="Search..." required>
+              
+                <button type="submit" aria-label="Search">
+                  <i class="fas fa-search" aria-hidden="true"></i>
+                </button>
             </form>
+              
             
         </div>
     </section>
@@ -289,10 +294,10 @@
             <div class="Footer__Section">
                 <h3>Newsletter</h3>
                 <form class="Newsletter__Form">
-                    <label></label>
-                    <input type="email" placeholder="Enter your email">
+                    <label for="email">Email address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
                     <button type="submit">Subscribe</button>
-                </form>
+                  </form>
             </div>
         </div>
         <div class="Footer__Bottom">

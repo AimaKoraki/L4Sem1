@@ -348,7 +348,14 @@ button:disabled {
     margin: 20px auto; 
     border: 1px solid var(--HERO-SBUTTON-BCOLOR);
 }
-
+.visually__hidden {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
 .search-bar input[type="text"] {
     border: none;
     padding: 10px;
