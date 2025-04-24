@@ -1367,7 +1367,7 @@ button:disabled {
   /*------------------------------------||Cart page-------------------------------------------------------*/
   .cart__content {
     display: grid;
-    grid-template-columns: 2fr 1fr; /* Wider table, narrower summary */
+    grid-template-columns: 2fr 1fr; 
     gap: 2rem;
     padding: 1rem;
 }
@@ -1522,7 +1522,7 @@ table img {
 
 
 /*------------------------------------||Payment page-------------------------------------------------------*/
-/* Container */
+
 .container{
     margin: 2rem;
 
@@ -1536,7 +1536,6 @@ table img {
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-/* Form Headings */
 .Payment__box h2 {
     font-size: 2rem;
     font-weight: 700;
@@ -1550,7 +1549,6 @@ table img {
     font-weight: 600;
 }
 
-/* Input Fields */
 .input__box {
     display: flex;
     flex-direction: column;
@@ -1577,7 +1575,6 @@ table img {
     outline: none;
 }
 
-/* Card Inputs Layout */
 .input__group:last-of-type .input__box {
     display: inline-block;
     width: 100%;
@@ -1616,14 +1613,14 @@ table img {
     height: auto;
 }
 
-/* Popup Overlay */
+/*-------------------------- Popup Box -------------------------------------------------------------------*/
 #popup  {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Background Blur */
+    background: rgba(0, 0, 0, 0.5); 
     backdrop-filter: blur(25px);
     display: none;
     justify-content: center;
@@ -1631,7 +1628,7 @@ table img {
     z-index: 1000;
 }
 
-/* Popup Box */
+
 .popup__content {
     background: var(--BGCOLOR);
     padding: 2rem;
@@ -1643,7 +1640,7 @@ table img {
 }
 
 .popup__content h2 {
-    color: var(--FONT-COLOR); /* Gamespace Theme Color */
+    color: var(--FONT-COLOR);
     margin-bottom: 1rem;
 }
 

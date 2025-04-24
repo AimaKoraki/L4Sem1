@@ -1,5 +1,6 @@
 
-// This script is responsible for loading the product data from a JSON file and displaying it on the page. It also handles adding items to the cart and updating the cart count.
+// -----------------This script is responsible for loading the product data from a JSON file and displaying it on the page. 
+// --------------------------It also handles adding items to the cart and updating the cart count.
 document.addEventListener("DOMContentLoaded", function () {
     updateCartCount(); 
 
@@ -87,7 +88,8 @@ function displayProducts(categories) {
 
 
 // ------------------------Function to add an item to the cart------------------------
-// ------------------------This function takes the item name, price, and image as parameters, checks if the item already exists in the cart, and updates the cart accordingly.------------------------
+// ------------------------This function takes the item name, price, and image as parameters, 
+// ---------------checks if the item already exists in the cart, and updates the cart accordingly.------------------------
 function addToCart(itemName, itemPrice, itemImage) {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
 

@@ -374,12 +374,12 @@
 
 @media (max-width: 600px) {
     table img {
-        max-width: 80px; /* Smaller images on mobile */
+        max-width: 80px;
     }
 }
 @media (max-width: 768px) {
     .cart__content {
-        grid-template-columns: 1fr; /* Stack on small screens */
+        grid-template-columns: 1fr;
     }
 
     .cart__buttons {
