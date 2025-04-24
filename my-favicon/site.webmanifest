@@ -3,13 +3,13 @@
   "short_name": "Game Sphere",
 "icons": [
   {
-    "src": "my-favicon/web-192x192.png",
+    "src": "/L4Sem1/my-favicon/web-192x192.png",
     "sizes": "192x192",
     "type": "image/png",
     "purpose": "any maskable"
   },
   {
-    "src": "my-favicon/web-512x512.png",
+    "src": "/L4Sem1/my-favicon/web-512x512.png",
     "sizes": "512x512",
     "type": "image/png",
     "purpose": "any maskable"
@@ -22,13 +22,13 @@
   "start_url": "index.html",
   "screenshots": [
   {
-    "src": "my-favicon/desktop.png",
+    "src": "/L4Sem1/my-favicon/desktop.png",
     "sizes": "1280x720",
     "type": "image/png",
     "form_factor": "wide"
   },
   {
-    "src": "my-favicon/mobile.png",
+    "src": "/L4Sem1/my-favicon/mobile.png",
     "sizes": "360x640",
     "type": "image/png",
     "form_factor": "narrow"
